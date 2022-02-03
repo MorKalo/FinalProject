@@ -1,0 +1,22 @@
+2022-02-01 13:48:13.433992 DEBUG add new airline is about to happen
+2022-02-01 13:48:38.011936 DEBUG add new airline is about to happen
+2022-02-01 13:49:05.790531 DEBUG add new airline is about to happen
+2022-02-01 13:50:18.610611 DEBUG add new airline is about to happen
+2022-02-01 13:50:57.131795 DEBUG add new airline is about to happen
+2022-02-01 13:50:57.138908 ERROR --FAILED--  [
+<id=1 name=Delta country_id=1 user_id=1 >] we already have Airline company with this name
+2022-02-01 13:51:33.634918 DEBUG add new airline is about to happen
+2022-02-01 13:51:45.971021 DEBUG add new airline is about to happen
+2022-02-01 13:52:01.501202 DEBUG add new airline is about to happen
+2022-02-01 13:52:01.503245 ERROR --FAILED--  [
+<id=1 name=Delta country_id=1 user_id=1 >] we already have Airline company with this name
+2022-02-01 13:55:26.540767 DEBUG add new airline is about to happen
+2022-02-01 13:55:26.543767 ERROR --FAILED--  [
+<id=1 name=Delta country_id=1 user_id=1 >] we already have Airline company with this name
+2022-02-01 13:55:46.404570 DEBUG add new airline is about to happen
+2022-02-01 13:55:46.407568 ERROR --FAILED--  [
+<id=1 name=Delta country_id=1 user_id=1 >] we already have Airline company with this name
+2022-02-01 13:56:16.605597 DEBUG add new airline is about to happen
+2022-02-01 14:06:55.287924 DEBUG add new airline is about to happen
+2022-02-03 16:08:40.554809 DEBUG add new airline is about to happen
+2022-02-03 19:33:41.185337 ERROR --FAILED--  we didnt find that user "MorMor
