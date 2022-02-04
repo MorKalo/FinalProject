@@ -13,8 +13,10 @@ from TicketNotFoundException import TicketNotFoundException
 
 class CustomerFacade(BaseFacade):
 
-    def __init__(self):
+    def __init__(self, token):
         self.repo=DbRepo(local_session)
+        self.token=token
+
 
 
     def update_customer(self, customer):#func check + log
@@ -48,17 +50,17 @@ class CustomerFacade(BaseFacade):
             return
         #Credit-Card number
         if self.repo.get_by_condition(Customer,
-                                      lambda query: query.filter(Customer.cradit_card_no == customer.cradit_card_no).all()) and \
+                                      lambda query: query.filter(Customer.credit_card_no == customer.credit_card_no).all()) and \
                 self.repo.get_by_condition(Customer, lambda query: query.filter(
-                    Customer.cradit_card_no == customer.cradit_card_no).all()) != original_customer:
+                    Customer.credit_card_no == customer.credit_card_no).all()) != original_customer:
             print('Failed, a customer with this credit card number is already exists.')
             self.repo.print_to_log(logging.ERROR,
-                                   f'--FAILED--  {customer.id} a customer with the Credit card  number {customer.cradit_card_no}'
+                                   f'--FAILED--  {customer.id} a customer with the Credit card  number {customer.credit_card_no}'
                                    f'is alredy exists.')
             return
         self.repo.update_by_id(Customer, Customer.id, customer.id, {Customer.first_name: customer.first_name, Customer.last_name: customer.last_name,
                                                                     Customer.address: customer.address, Customer.phone_number: customer.phone_number,
-                                                                    Customer.cradit_card_no: customer.cradit_card_no})
+                                                                    Customer.credit_card_no: customer.credit_card_no})
         self.repo.print_to_log(logging.INFO,
                            f'--Sucsses--  customer id  {customer.id}  update details:'
                            f' {customer}')

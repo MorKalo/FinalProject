@@ -11,8 +11,9 @@ from Country import Country
 
 class AdministratorFacade(BaseFacade):
 
-    def __init__(self):
+    def __init__(self, token):
         self.repo=DbRepo(local_session)
+        self.token=token
 
     def get_all_customers(self):#finish and check
         self.repo.print_to_log(logging.DEBUG, f'get all customer"s is about to happen')

@@ -20,3 +20,168 @@
 2022-02-01 14:06:55.287924 DEBUG add new airline is about to happen
 2022-02-03 16:08:40.554809 DEBUG add new airline is about to happen
 2022-02-03 19:33:41.185337 ERROR --FAILED--  we didnt find that user "MorMor
+2022-02-03 23:19:12.531230 ERROR --FAILED--  we didnt find that user "Mormor"
+2022-02-03 23:20:42.744076 ERROR --FAILED--  we didnt find that user "Mormor"
+2022-02-03 23:22:30.763665 ERROR --FAILED--   wrong password for user "MorMor"
+2022-02-03 23:24:59.721176 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:25:43.129001 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:29:20.094708 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:29:29.099437 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:36:30.144768 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:43:14.008967 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:43:32.902727 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:44:20.488175 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:45:27.709057 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:49:04.154822 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:51:10.683017 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:51:26.971869 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:51:39.520443 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-03 23:51:57.109954 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:02:18.438632 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:02:59.053153 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:03:19.157659 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:03:56.172732 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:04:09.510632 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:04:38.633841 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:05:35.256840 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:06:44.153642 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:06:59.921115 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:11:40.954759 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:11:50.781078 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:14:13.641904 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:14:21.673088 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:15:10.476774 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 00:15:10.476774 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 00:16:44.834136 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 00:16:44.834136 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 00:19:24.804255 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 00:19:24.804255 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 00:19:41.924318 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:19:41.924318 INFO --Sucsses-- the user "MorMor" transferred to Customer Facade  
+2022-02-04 00:20:20.891095 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:20:20.891095 INFO --Sucsses-- the user "MorMor" transferred to Customer Facade  
+2022-02-04 00:20:53.502301 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 00:20:53.502301 INFO --Sucsses-- the user "MorMor" transferred to Customer Facade  
+2022-02-04 00:21:04.302077 ERROR --FAILED--   wrong password for user "MorMor"
+2022-02-04 00:21:14.708575 ERROR --FAILED--  we didnt find that user "Mormor"
+2022-02-04 00:26:15.660880 ERROR --FAILED--  we didnt find that user "Mormor"
+2022-02-04 00:26:50.094062 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:26:50.094062 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:29:20.644548 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:29:20.644548 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:30:00.617353 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:30:00.617353 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:30:57.235073 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:30:57.236074 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:43:18.025757 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:43:18.025757 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:43:28.149908 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:43:28.149908 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:44:11.816603 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:44:11.816603 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:48:57.584775 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:48:57.584775 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:49:11.490940 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:49:11.491940 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:50:15.566491 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:50:15.566491 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:54:53.283197 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:54:53.283197 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:55:30.204811 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:55:30.204811 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:55:51.760745 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:55:51.760745 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:56:09.263369 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:56:09.263369 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:56:24.666962 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:56:24.666962 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:57:05.886415 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:57:05.886415 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 00:58:53.060747 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 00:58:53.060747 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:01:18.334937 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:01:18.334937 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:06:10.281136 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:06:10.281136 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:08:43.347229 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:08:43.347229 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:08:56.985917 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:08:56.985917 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:09:18.689808 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:09:18.689808 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:10:47.518842 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:10:47.518842 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:11:32.289429 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:11:32.289429 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:11:59.639089 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:11:59.639089 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:12:07.524142 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:12:07.524142 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:12:27.594292 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:12:27.594292 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:12:58.714960 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:12:58.714960 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:13:57.599498 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:13:57.600500 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:14:34.823650 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:14:34.823650 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:15:22.715731 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 01:15:22.715731 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 01:17:24.809670 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:17:24.811670 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:18:21.457997 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:18:21.457997 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:18:48.845396 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:18:48.846397 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:19:28.025667 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:19:28.025667 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:19:56.474026 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:19:56.474026 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:20:03.482122 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:20:03.482122 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:20:52.031973 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:20:52.032973 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:22:05.025784 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:22:05.025784 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:22:28.623167 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:22:28.623167 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:22:37.961942 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:22:37.961942 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:24:47.438362 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:24:47.439363 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:27:38.738443 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:27:38.738443 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:41:50.473657 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:41:50.473657 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:42:23.582801 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:42:23.582801 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:42:35.403876 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:42:35.403876 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:43:13.649297 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:43:13.649297 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:43:55.918092 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:43:55.918092 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:44:19.349603 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:44:19.349603 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:44:27.626031 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:44:27.626031 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:44:34.847975 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:44:34.848975 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:44:52.111707 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:44:52.111707 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:47:29.491170 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:47:29.491170 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:47:54.696995 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:47:54.697995 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:48:20.536282 INFO --Sucsses-- the password is match for user "Turkish"
+2022-02-04 01:48:20.537281 INFO --Sucsses-- the user "Turkish" transferred to Airline Facade  
+2022-02-04 01:49:17.055444 INFO --Sucsses-- the password is match for user "MorMor"
+2022-02-04 01:49:17.055444 INFO --Sucsses-- the user "MorMor" transferred to Customer Facade  
+2022-02-04 02:16:54.898599 ERROR --FAILED--   The username "[
+<id=1 username=MorMor password=123 email=mor.k@gmail.com         user_role=2 >]"  is alrady exist 
+2022-02-04 02:17:16.572415 ERROR --FAILED--   The username "MorMor"  is alrady exist 
+2022-02-04 02:22:29.744125 ERROR --FAILED--   The email "mor.k@gmail.com"  is alrady exist 
+2022-02-04 02:22:55.228343 ERROR --FAILED--   The email "mor.k@gmail.com"  is alrady exist 
+2022-02-04 02:23:42.239750 ERROR --FAILED--   The email "mor.k@gmail.com"  is alrady exist 
+2022-02-04 02:27:53.656331 INFO --Sucsses-- the user "[]"  was created: email:[], user role:2  
+2022-02-04 02:29:39.187363 INFO --Sucsses-- the user "MorMo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  

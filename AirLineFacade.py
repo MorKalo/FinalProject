@@ -8,8 +8,9 @@ from Customer import Customer
 
 class AirLineFacade(BaseFacade):
 
-    def __init__(self):
+    def __init__(self, token):
         self.repo=DbRepo(local_session)
+        self.token=token
 
     def get_flights_by_airline(self, airline):
         print(self.repo.getFlightsByAirlineId(airline))

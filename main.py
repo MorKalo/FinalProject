@@ -14,7 +14,7 @@ from AdministratorFacade import AdministratorFacade
 from AirLineFacade import AirLineFacade
 from CustomerFacade import CustomerFacade
 from AnonymusFacade import AnonymusFacade
-
+from LoginToken import LoginToken
 from Db_config import local_session, create_all_entities
 
 
@@ -75,17 +75,19 @@ repo.add(user10)
 #add admin
 admin1=Administrator(first_name='Pnina', last_name='Kalo', user_id=8)
 repo.add(admin1)
+admin1=Administrator(first_name='Moti', last_name='Kalo', user_id=10)
+repo.add(admin1)
 
 #add customer's
-customer1=Customer(first_name='Mor', last_name='Kalo', user_id=1, phone_number=502111202, cradit_card_no=123456)
+customer1=Customer(first_name='Mor', last_name='Kalo', user_id=1, phone_number=502111202, credit_card_no=123456)
 repo.add(customer1)
-customer2=Customer(first_name='Shlomi', last_name='Moshe', user_id=2, cradit_card_no=45802601)
+customer2=Customer(first_name='Shlomi', last_name='Moshe', user_id=2, credit_card_no=45802601)
 repo.add(customer2)
 
 #add airline's
 airline1 = AirlineCompany(name="Delta", country_id=1, user_id=1)
 repo.add(airline1)
-airline2 = AirlineCompany(name="Turkish AirLine", country_id=5, user_id=2)
+airline2 = AirlineCompany(name="Turkish AirLine", country_id=5, user_id=4)
 repo.add(airline2)
 airline3 = AirlineCompany(name="JetBlue", country_id=1, user_id=7)
 repo.add(airline3)
@@ -119,4 +121,13 @@ repo.add(ticket2)
 #adfac.add_airline(uair6, air6)
 
 annas=AnonymusFacade()
-annas.login('MorMor', '456')
+Mor=User(username='MorMo', password='234', email='mor.ka@gmail.com', user_role=2)
+Morcust=Customer(first_name='soli', last_name='holy', address='something', phone_number='039527240',
+                 credit_card_no='3456667')
+annas.create_new_user(Mor, Morcust)
+
+#logg=LoginToken
+#me=LoginToken(1, 'Mor', 1 )
+#me.id
+#me.name
+#me.role
