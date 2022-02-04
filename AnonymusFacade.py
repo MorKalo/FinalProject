@@ -46,7 +46,7 @@ class AnonymusFacade(BaseFacade):
                     self.repo.print_to_log(logging.INFO,
                                            f'--Sucsses-- the user "{username}" transferred to Customer Facade  ')
                     custname=self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.user_id == user[0].id).all())
-                    return AirLineFacade(LoginToken(user[0].id, custname[0].first_name, user[0].user_role))
+                    return CustomerFacade(LoginToken(user[0].id, custname[0].first_name, user[0].user_role))
                 elif user[0].user_role == 3:
                     self.repo.print_to_log(logging.INFO,
                                            f'--Sucsses-- the user "{username}" transferred to Admin Facade  ')

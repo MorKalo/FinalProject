@@ -97,15 +97,20 @@ airline5 = AirlineCompany(name="Qatar Airways", country_id=6, user_id=5)
 repo.add(airline5)
 
 #add flight's
-flight1 = Flight(airline_Company_Id=1, origin_Country_id=2, destination_Country_id=1, remaining_Tickets=12)
+flight1 = Flight(airline_Company_Id=1, origin_Country_id=2, destination_Country_id=1, departure_Time=datetime(2022, 3, 30, 15, 0, 0),
+                        landing_Time=datetime(2022, 3, 30, 20, 0, 0),  remaining_Tickets=12)
 repo.add(flight1)
-flight2 = Flight(airline_Company_Id=2, origin_Country_id=3, destination_Country_id=4, remaining_Tickets=43)
+flight2 = Flight(airline_Company_Id=2, origin_Country_id=3, destination_Country_id=4, departure_Time=datetime(2022, 2, 10, 11, 0, 0),
+                        landing_Time=datetime(2022, 2, 10, 12, 0, 0), remaining_Tickets=43)
 repo.add(flight2)
-flight3 = Flight(airline_Company_Id=3, origin_Country_id=5, destination_Country_id=2, remaining_Tickets=123)
+flight3 = Flight(airline_Company_Id=3, origin_Country_id=5, destination_Country_id=2, departure_Time=datetime(2022, 2, 12, 12, 0, 0),
+                        landing_Time=datetime(2022, 2, 13, 6, 0, 0), remaining_Tickets=123)
 repo.add(flight3)
-flight4 = Flight(airline_Company_Id=2, origin_Country_id=1, destination_Country_id=3, remaining_Tickets=234)
+flight4 = Flight(airline_Company_Id=2, origin_Country_id=1, destination_Country_id=3, departure_Time=datetime(2022, 2, 16, 3, 0, 0),
+                        landing_Time=datetime(2022, 2, 16, 12, 0, 0), remaining_Tickets=234)
 repo.add(flight4)
-flight5 = Flight(airline_Company_Id=5, origin_Country_id=4, destination_Country_id=5, remaining_Tickets=0)
+flight5 = Flight(airline_Company_Id=5, origin_Country_id=4, destination_Country_id=5, departure_Time=datetime(2022, 2, 28, 23, 0, 0),
+                        landing_Time=datetime(2022, 3, 1, 3, 0, 0), remaining_Tickets=0)
 repo.add(flight5)
 
 #add tickets's
@@ -120,12 +125,18 @@ repo.add(ticket2)
 #air6=AirlineCompany(name='loi', country_id=6)
 #adfac.add_airline(uair6, air6)
 
-annas=AnonymusFacade()
-Mor=User(username='akj', password='234', email='mor.ka@gmail.com', user_role=3)
-Morcust=Customer(first_name='soli', last_name='holy', address='something', phone_number='0502111202',
-                 credit_card_no='1234567')
+#annas=AnonymusFacade()
+#Mor=User(username='akj', password='234', email='mor.ka@gmail.com', user_role=3)
+#Morcust=Customer(first_name='soli', last_name='holy', address='something', phone_number='0502111202',
+#                 credit_card_no='1234567')
 
-airfac=AirLineFacade(LoginToken(id=2, name='shlomi', role=2))
+airfac=AirLineFacade(LoginToken(id=2, name='Mor', role=2))
 #airfac.get_flights_by_airline(2)
-air=AirlineCompany(id=4, name='Deltaj')
-airfac.update_airline(air)
+#air=AirlineCompany(id=4, name='Deltaj')
+#airfac.update_airline(air)
+
+
+
+
+fli=Flight(id=3, origin_Country_id=3, destination_Country_id=2 )
+airfac.update_flight(fli)
