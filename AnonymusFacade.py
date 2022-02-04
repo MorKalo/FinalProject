@@ -1,4 +1,4 @@
-#NEED TO FINISH:  def_create new user, def add customer
+#there is a Q
 import logging
 from BaseFacade import BaseFacade
 from Db_config import local_session, create_all_entities
@@ -9,10 +9,10 @@ from Customer import Customer
 from UserAlreadyExistException import *
 from User import User
 from AirlineCompany import AirlineCompany
-from AirLineFacade import AirLineFacade
 from CustomerFacade import CustomerFacade
 from AdministratorFacade import AdministratorFacade
 from LoginToken import LoginToken
+
 
 
 class AnonymusFacade(BaseFacade):
@@ -56,7 +56,6 @@ class AnonymusFacade(BaseFacade):
 
 
     def create_new_user(self, user):
-        #NEED TO ENTERED THE USER ID TO CUSTOMER;
         username=self.repo.get_by_condition(User, lambda query: query.filter(User.username == user.username).all())
         if username:
             self.repo.print_to_log(logging.ERROR,
@@ -74,7 +73,7 @@ class AnonymusFacade(BaseFacade):
             return True
 
 
-    def add_customer(self, user, customer):#IF ther is a error because one of the unique fields, delete the user?
+    def add_customer(self, user, customer):#IF there is a error because one of the unique fields, delete the user?
         if not self.create_new_user(user):
             print('We unable to create  the user, please check the data and try again later ')
             self.repo.print_to_log(logging.CRITICAL,
@@ -82,6 +81,7 @@ class AnonymusFacade(BaseFacade):
             return
         else:
             self.repo.print_to_log(logging.DEBUG, f'Adding customer is about to happen')
+
             # trying to find this customer in Customer, and to check if there isnt another customer
             # with does deatils:
             # Phone number
@@ -101,8 +101,9 @@ class AnonymusFacade(BaseFacade):
                                        f' because there is a customer with the same credit card number {customer.credit_card_no}')
                 return
             else:
-                customer.user_id=user.id
+                customer.user_id=user.id  #getting the user id from the user we already create
                 self.repo.add(customer)
+                self.repo.update(User, user.id, {User.user_role:2})
                 self.repo.print_to_log(logging.INFO,
                                        f'--Sucsses-- the customer {customer.id, customer.first_name, customer.last_name}'
                                        f'   was created successfully, his details:   address:{customer.address},'

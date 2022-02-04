@@ -89,8 +89,8 @@ class DbRepo:
     def getFlightsByCustomer(self, customer):
         return self.local_session.query(Flight).filter(Ticket.customer_id == customer).all()
 
-    def getFlightsByAirlineId(self, airline):
-        return self.local_session.query(Flight).filter(Flight.airline_Company_Id == airline).all()
+    def getFlightsByAirlineId(self, airline_id):
+        return self.local_session.query(Flight).filter(Flight.airline_Company_Id == airline_id).all()
 
     def get_by_condition(self, table_class, cond):
         #return self.local_session.query(table_class).filter(cond).all()

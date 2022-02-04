@@ -121,14 +121,11 @@ repo.add(ticket2)
 #adfac.add_airline(uair6, air6)
 
 annas=AnonymusFacade()
-Mor=User(username='akj', password='234', email='mor.ka@gmail.com', user_role=2)
+Mor=User(username='akj', password='234', email='mor.ka@gmail.com', user_role=3)
 Morcust=Customer(first_name='soli', last_name='holy', address='something', phone_number='0502111202',
                  credit_card_no='1234567')
 
-#annas.create_new_user(Mor)
-annas.add_customer(Mor, Morcust)
-#logg=LoginToken
-#me=LoginToken(1, 'Mor', 1 )
-#me.id
-#me.name
-#me.role
+airfac=AirLineFacade(LoginToken(id=2, name='shlomi', role=2))
+#airfac.get_flights_by_airline(2)
+air=AirlineCompany(id=4, name='Deltaj')
+airfac.update_airline(air)
