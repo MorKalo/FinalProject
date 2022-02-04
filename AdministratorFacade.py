@@ -7,19 +7,34 @@ from Customer import Customer
 from AirlineCompany import AirlineCompany
 from User import User
 from Country import Country
+from LoginToken import LoginToken
+from AnonymusFacade import AnonymusFacade
 
 
 class AdministratorFacade(BaseFacade):
 
-    def __init__(self, token):
+    def __init__(self):
         self.repo=DbRepo(local_session)
-        self.token=token
+        #self.token=token
 
     def get_all_customers(self):#finish and check
         self.repo.print_to_log(logging.DEBUG, f'get all customer"s is about to happen')
         return self.repo.get_all(Customer)
 
-    def add_airline(self,user, airline):#need to insert in the logger the name of airline
+    def create_airline(self, user, airline):#user and airline are object
+        annfacade=AnonymusFacade()
+        if annfacade.create_new_user(user):
+            self.add_airline(user, airline)
+            self.repo.print_to_log(logging.INFO,
+                           f'--Sucsses--  User created: {user}, Airline created: {airline}')
+        else:
+            print (f'--Failed-- we cant create this user and airline company')
+            self.repo.print_to_log(logging.ERROR,
+                                   f'--FAILED--   we cant create this user and airline company .')
+
+
+
+    def add_airline(self, user, airline):#use this func from create airline only.
         self.repo.print_to_log(logging.DEBUG, f'add new airline is about to happen')
         if user.user_role!=1:
             print('Failed. User role need to be "AIRLINE".')
@@ -30,13 +45,12 @@ class AdministratorFacade(BaseFacade):
                         AirlineCompany.name == airline.name).all()):
             print('Failed.  we already have Airline company with this name.')
             self.repo.print_to_log(logging.ERROR,
-                        f'--FAILED--  {airline_name} we already have Airline company with this name')
+                        f'--FAILED--  {airline.name} we already have Airline company with this name')
             return
         if not self.repo.get_by_condition(Country,
                                           lambda query: query.filter(Country.id == airline.country_id).all()):
             print(f' Failed.  the country {airline.country_id} does not exist.')
             return
-        airline.id=None
         airline.user_id=user.id
         self.repo.add(airline)
         return

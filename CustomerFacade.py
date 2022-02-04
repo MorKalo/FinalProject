@@ -1,3 +1,4 @@
+#need to insert a check of token
 import logging
 from BaseFacade import BaseFacade
 from Db_config import local_session, create_all_entities
@@ -9,9 +10,11 @@ from Ticket import Ticket
 from FlightNotFound import FlightNotFound
 from NoMoreTicketsForFlightsException import NoMoreTicketsForFlightsException
 from TicketNotFoundException import TicketNotFoundException
+from LoginToken import LoginToken
+from AnonymusFacade import AnonymusFacade
 
 
-class CustomerFacade(BaseFacade):
+class CustomerFacade(AnonymusFacade):
 
     def __init__(self, token):
         self.repo=DbRepo(local_session)
@@ -20,16 +23,6 @@ class CustomerFacade(BaseFacade):
 
     def update_customer(self, customer):#func check + log
         self.repo.print_to_log(logging.DEBUG, f'update customer is about to happen')
-        if not isinstance(customer.id, int):
-            print('Customer ID must to be integer')
-            self.repo.print_to_log(logging.ERROR,
-                                   f'--FAILED--  {customer.id} must be INTEGER')
-            return
-        if customer.id <= 0 :
-            print('Customer ID must to be positive')
-            self.repo.print_to_log(logging.ERROR,
-                                   f'--FAILED--  {customer.id} must be POSITIVE')
-            return
         original_customer = self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.id == customer.id).all())
         if not original_customer:
             print('Failed, we cant find customer with this ID number.')
@@ -101,37 +94,37 @@ class CustomerFacade(BaseFacade):
 
 
     #CHECK: func + log ---cant get customer id for log---
-    def remove_ticket(self, ticket): #FUNC BY ID
+    def remove_ticket(self, ticket_id): #FUNC BY ID
         self.repo.print_to_log(logging.DEBUG, f'removing ticket is about to happen.')
-        ticket_exists = self.repo.get_by_condition(Ticket, lambda query: query.filter(Ticket.id == ticket).all())
+        ticket_exists = self.repo.get_by_condition(Ticket, lambda query: query.filter(Ticket.id == ticket_id).all())
         if not ticket_exists:
             self.repo.print_to_log(logging.ERROR,
-                                   f'--FAILED--  customer id {Ticket.customer_id} trying to remove ticket id {ticket}'
+                                   f'--FAILED--  customer id {Ticket.customer_id} trying to remove ticket id {ticket_id}'
                                    f'  but we cant find this ticket')
             raise TicketNotFoundException
         else:
-            fullticket = self.repo.get_by_id(Ticket, ticket)
+            fullticket = self.repo.get_by_id(Ticket, ticket_id)
             flight = self.repo.get_by_condition(Flight,
                                                 lambda query: query.filter(Flight.id == fullticket.flight_id).all())
             ticketforflight=flight[0].remaining_Tickets
-            self.repo.update_by_id(Flight,ticket,{Flight.remaining_Tickets:ticketforflight+1})
-            self.repo.delete(Ticket, ticket)
-            self.repo.print_to_log(logging.INFO, f'--SUCCESS--  remove ticket for customer id  {Ticket.customer_id} to flight {ticket} is finish Successfully')
-            self.repo.print_to_log(logging.DEBUG, f'there is more {flight[0].remaining_Tickets} ticket for flight {ticket}')
+            self.repo.update_by_id(Flight,ticket_id,{Flight.remaining_Tickets:ticketforflight+1})
+            self.repo.delete(Ticket, ticket_id)
+            self.repo.print_to_log(logging.INFO, f'--SUCCESS--  remove ticket for customer id  {Ticket.customer_id} to flight {ticket_id} is finish Successfully')
+            self.repo.print_to_log(logging.DEBUG, f'there is more {flight[0].remaining_Tickets} ticket for flight {ticket_id}')
 
 
     # CHECK: func + log
-    def get_tickets_by_customer(self, customer):#FUNC BY ID
+    def get_tickets_by_customer(self, customer_id):#FUNC BY ID
         self.repo.print_to_log(logging.DEBUG, f'start Get_tickets_by_customer func.')
-        checkcustomer=self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.id==customer).all())
+        checkcustomer=self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.id==customer_id).all())
         if not checkcustomer:
             print(f' Failed. We cant find this customer id')
             self.repo.print_to_log(logging.ERROR,
-                               f'--FAILED-- we cant find customer id {customer}')
+                               f'--FAILED-- we cant find customer id {customer_id}')
         else:
             self.repo.print_to_log(logging.INFO,
-                       f'--SUCCESS--  get ticket by customer id  {customer} is finish Successfully')
-            return self.repo.get_by_condition(Ticket, lambda query:query.filter(Ticket.customer_id==customer).all())
+                       f'--SUCCESS--  get ticket by customer id  {customer_id} is finish Successfully')
+            return self.repo.get_by_condition(Ticket, lambda query:query.filter(Ticket.customer_id==customer_id).all())
 
 
 

@@ -87,3 +87,20 @@ def remove_ticket(self, ticket_id):  # cant get customer id
                          data):  # data is a dictionary of all the new columns and values
             self.local_session.query(table_class).filter(table_class.id == id_).update(data)
             self.local_session.commit()
+
+            # adfac=AdministratorFacade()
+            # uair6=User(username='loli', email='loli@gmail.com', user_role=1)
+            # air6=AirlineCompany(name='loi', country_id=6)
+            # adfac.add_airline(uair6, air6)
+
+            # annas=AnonymusFacade()
+            # Mor=User(username='akj', password='234', email='mor.ka@gmail.com', user_role=3)
+            # Morcust=Customer(first_name='soli', last_name='holy', address='something', phone_number='0502111202',
+            #                 credit_card_no='1234567')
+            # airfac=AirLineFacade(LoginToken(id=2, name='Mor', role=2))
+            # airfac.get_flights_by_airline(2)
+            # air=AirlineCompany(id=4, name='Deltaj')
+            # airfac.update_airline(air)
+
+            # fli=Flight(id=3, origin_Country_id=3, destination_Country_id=5 )
+            # airfac.update_flight(fli)

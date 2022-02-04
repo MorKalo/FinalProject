@@ -15,7 +15,7 @@ class AirLineFacade(AnonymusFacade):
 
     def __init__(self, login_token):
         self.repo=DbRepo(local_session)
-        self.login_token =login_token
+        #self.login_token =login_token
 
 
     def get_flights_by_airline(self, airline_id): #buy id
@@ -23,7 +23,7 @@ class AirLineFacade(AnonymusFacade):
         return self.repo.getFlightsByAirlineId(airline_id)
 
 
-    def update_airline(self, airline): # need to add the token
+    def update_airline(self, airline): #update by object.
         self.repo.print_to_log(logging.DEBUG, f'update airline is about to happen')
         #no need to check if the airline company is exists because the TOKEN.
         # trying to find this airline in Airline Company, and to check if there isnt another airline company with does deatils:

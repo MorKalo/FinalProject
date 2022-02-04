@@ -9,13 +9,11 @@ from Customer import Customer
 from UserAlreadyExistException import *
 from User import User
 from AirlineCompany import AirlineCompany
-from CustomerFacade import CustomerFacade
-from AdministratorFacade import AdministratorFacade
 from LoginToken import LoginToken
 
 
-
 class AnonymusFacade(BaseFacade):
+
 
     def __init__(self):
         self.repo=DbRepo(local_session)

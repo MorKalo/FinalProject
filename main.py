@@ -119,24 +119,9 @@ repo.add(ticket1)
 ticket2=Ticket(flight_id=2, customer_id=1 )
 repo.add(ticket2)
 
-
-#adfac=AdministratorFacade()
-#uair6=User(username='loli', email='loli@gmail.com', user_role=1)
-#air6=AirlineCompany(name='loi', country_id=6)
-#adfac.add_airline(uair6, air6)
-
-#annas=AnonymusFacade()
-#Mor=User(username='akj', password='234', email='mor.ka@gmail.com', user_role=3)
-#Morcust=Customer(first_name='soli', last_name='holy', address='something', phone_number='0502111202',
-#                 credit_card_no='1234567')
-
-airfac=AirLineFacade(LoginToken(id=2, name='Mor', role=2))
-#airfac.get_flights_by_airline(2)
-#air=AirlineCompany(id=4, name='Deltaj')
-#airfac.update_airline(air)
-
-
-
-
-fli=Flight(id=3, origin_Country_id=3, destination_Country_id=5 )
-airfac.update_flight(fli)
+airf=AdministratorFacade()
+airus=User(username='hololol', password='a1234', email='tokok@gmail.com', user_role=1)
+airl=AirlineCompany(name='hololo', country_id=3)
+#airus2=User(username='MorMor', user_role=1)
+print (f' holllllllllla  {airus.username}')
+airf.create_airline(airus, airl)
