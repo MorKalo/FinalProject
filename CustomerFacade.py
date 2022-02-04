@@ -18,7 +18,6 @@ class CustomerFacade(BaseFacade):
         self.token=token
 
 
-
     def update_customer(self, customer):#func check + log
         self.repo.print_to_log(logging.DEBUG, f'update customer is about to happen')
         if not isinstance(customer.id, int):
@@ -65,6 +64,7 @@ class CustomerFacade(BaseFacade):
                            f'--Sucsses--  customer id  {customer.id}  update details:'
                            f' {customer}')
 
+
     # CHECK: func + log
     def add_ticket(self, ticket):#Need to input object of ticket, with flight_id & customer_id
         self.repo.print_to_log(logging.DEBUG, f'adding ticket is about to happen')
@@ -99,6 +99,7 @@ class CustomerFacade(BaseFacade):
             self.repo.print_to_log(logging.INFO, f'--SUCCESS--  adding ticket for customer id  {ticket.customer_id} to flight {ticket.flight_id} is finish Successfully')
             self.repo.print_to_log(logging.DEBUG, f'there is more {flight[0].remaining_Tickets} ticket for flight {ticket.flight_id}')
 
+
     #CHECK: func + log ---cant get customer id for log---
     def remove_ticket(self, ticket): #FUNC BY ID
         self.repo.print_to_log(logging.DEBUG, f'removing ticket is about to happen.')
@@ -117,6 +118,7 @@ class CustomerFacade(BaseFacade):
             self.repo.delete(Ticket, ticket)
             self.repo.print_to_log(logging.INFO, f'--SUCCESS--  remove ticket for customer id  {Ticket.customer_id} to flight {ticket} is finish Successfully')
             self.repo.print_to_log(logging.DEBUG, f'there is more {flight[0].remaining_Tickets} ticket for flight {ticket}')
+
 
     # CHECK: func + log
     def get_tickets_by_customer(self, customer):#FUNC BY ID

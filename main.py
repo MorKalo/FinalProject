@@ -79,7 +79,7 @@ admin1=Administrator(first_name='Moti', last_name='Kalo', user_id=10)
 repo.add(admin1)
 
 #add customer's
-customer1=Customer(first_name='Mor', last_name='Kalo', user_id=1, phone_number=502111202, credit_card_no=123456)
+customer1=Customer(first_name='Mor', last_name='Kalo', user_id=1, phone_number='0502111201', credit_card_no='123456')
 repo.add(customer1)
 customer2=Customer(first_name='Shlomi', last_name='Moshe', user_id=2, credit_card_no=45802601)
 repo.add(customer2)
@@ -121,11 +121,12 @@ repo.add(ticket2)
 #adfac.add_airline(uair6, air6)
 
 annas=AnonymusFacade()
-Mor=User(username='MorMo', password='234', email='mor.ka@gmail.com', user_role=2)
-Morcust=Customer(first_name='soli', last_name='holy', address='something', phone_number='039527240',
-                 credit_card_no='3456667')
-annas.create_new_user(Mor, Morcust)
+Mor=User(username='akj', password='234', email='mor.ka@gmail.com', user_role=2)
+Morcust=Customer(first_name='soli', last_name='holy', address='something', phone_number='0502111202',
+                 credit_card_no='1234567')
 
+#annas.create_new_user(Mor)
+annas.add_customer(Mor, Morcust)
 #logg=LoginToken
 #me=LoginToken(1, 'Mor', 1 )
 #me.id

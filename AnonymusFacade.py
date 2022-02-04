@@ -55,7 +55,7 @@ class AnonymusFacade(BaseFacade):
                         LoginToken(user[0].id, name[0].first_name, user[0].user_role))
 
 
-    def create_new_user(self, user, customer):
+    def create_new_user(self, user):
         #NEED TO ENTERED THE USER ID TO CUSTOMER;
         username=self.repo.get_by_condition(User, lambda query: query.filter(User.username == user.username).all())
         if username:
@@ -70,16 +70,41 @@ class AnonymusFacade(BaseFacade):
                                        f'--FAILED--   The email "{email[0].email}"  is alrady exist ')
             self.repo.add(user)
             self.repo.print_to_log(logging.INFO,
-            f'--Sucsses-- the user "{user.username}"  was created successfully, his details: email:{user.email}, user role:{user.user_role}  ')
-
+            f'--Sucsses-- the user "{user.username}"  was created successfully, his details:   user id:{user.id} email:{user.email}, user role:{user.user_role}  ')
             return True
-            #super().add_customer(customer)
 
 
-
-    def add_customer(self, customer):
-        pass
-     #   super().add_customer(customer)
-
-
-
+    def add_customer(self, user, customer):#IF ther is a error because one of the unique fields, delete the user?
+        if not self.create_new_user(user):
+            print('We unable to create  the user, please check the data and try again later ')
+            self.repo.print_to_log(logging.CRITICAL,
+            f'--FAILED-- We unable to create  the user "{user.username}"')
+            return
+        else:
+            self.repo.print_to_log(logging.DEBUG, f'Adding customer is about to happen')
+            # trying to find this customer in Customer, and to check if there isnt another customer
+            # with does deatils:
+            # Phone number
+            if self.repo.get_by_condition(Customer,lambda query: query.filter(
+                                              Customer.phone_number == customer.phone_number).all()):
+                print('Failed, a customer with this phone number is already exists.')
+                self.repo.print_to_log(logging.ERROR,
+                                       f'--FAILED--  we unable to create the customer for user id  {user.id}'
+                                       f' because there is a customer with the same Phone number {customer.phone_number}')
+                return
+            # Credit-Card number
+            elif self.repo.get_by_condition(Customer,lambda query: query.filter(
+                                              Customer.credit_card_no == customer.credit_card_no).all()):
+                print('Failed, a customer with this credit card number is already exists.')
+                self.repo.print_to_log(logging.ERROR,
+                                       f'--FAILED--  we unable to create the customer for user id  {user.id}'
+                                       f' because there is a customer with the same credit card number {customer.credit_card_no}')
+                return
+            else:
+                customer.user_id=user.id
+                self.repo.add(customer)
+                self.repo.print_to_log(logging.INFO,
+                                       f'--Sucsses-- the customer {customer.id, customer.first_name, customer.last_name}'
+                                       f'   was created successfully, his details:   address:{customer.address},'
+                                       f' phone number:{customer.phone_number}, credit card number:{customer.credit_card_no}  ')
+                return

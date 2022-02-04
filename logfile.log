@@ -185,3 +185,105 @@
 2022-02-04 02:23:42.239750 ERROR --FAILED--   The email "mor.k@gmail.com"  is alrady exist 
 2022-02-04 02:27:53.656331 INFO --Sucsses-- the user "[]"  was created: email:[], user role:2  
 2022-02-04 02:29:39.187363 INFO --Sucsses-- the user "MorMo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:38:37.406690 INFO --Sucsses-- the user "MorMo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:39:24.054148 INFO --Sucsses-- the user "MorMo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:50:37.580250 INFO --Sucsses-- the user "MorMo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:51:27.400404 INFO --Sucsses-- the user "MorMo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:52:29.411805 INFO --Sucsses-- the user "MorMo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:54:07.575692 INFO --Sucsses-- the user "MorMo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:54:40.551192 INFO --Sucsses-- the user "MorMo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:54:40.552191 ERROR --FAILED--   The username "MorMo"  is alrady exist 
+2022-02-04 02:54:59.185265 INFO --Sucsses-- the user "MorMoo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:54:59.187227 ERROR --FAILED--   The username "MorMoo"  is alrady exist 
+2022-02-04 02:55:34.613532 INFO --Sucsses-- the user "MorMoo"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:56:45.555634 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:58:33.461682 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:59:34.766982 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:59:55.480504 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 02:59:55.480504 DEBUG update customer is about to happen
+2022-02-04 03:00:07.832533 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:00:07.832533 DEBUG update customer is about to happen
+2022-02-04 03:00:41.267937 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:00:41.267937 DEBUG adding customer is about to happen
+2022-02-04 03:00:46.617018 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:00:46.617018 DEBUG Adding customer is about to happen
+2022-02-04 03:06:37.641028 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:06:37.641028 DEBUG Adding customer is about to happen
+2022-02-04 03:08:09.396113 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:08:09.396113 DEBUG Adding customer is about to happen
+2022-02-04 03:08:58.479049 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:08:58.480049 DEBUG Adding customer is about to happen
+2022-02-04 03:09:41.215761 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:09:41.215761 DEBUG Adding customer is about to happen
+2022-02-04 03:10:08.768298 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:10:08.768298 DEBUG Adding customer is about to happen
+2022-02-04 03:10:35.393241 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:10:35.393241 DEBUG Adding customer is about to happen
+2022-02-04 03:10:44.212489 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:10:44.212489 DEBUG Adding customer is about to happen
+2022-02-04 03:10:44.213488 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-04 03:11:18.229845 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:11:18.229845 DEBUG Adding customer is about to happen
+2022-02-04 03:11:29.958324 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:11:29.958324 DEBUG Adding customer is about to happen
+2022-02-04 03:11:29.959329 ERROR --FAILED--  
+<id=None first_name=soli last_name=holy address=something         phone_number=0502111201 credit_card_no=3456667 user_id=None> a customer with the same Phone number 0502111201is alredy exists.
+2022-02-04 03:12:09.476212 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:12:09.476212 DEBUG Adding customer is about to happen
+2022-02-04 03:12:09.478212 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-04 03:16:07.077707 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:16:07.077707 DEBUG Adding customer is about to happen
+2022-02-04 03:16:07.078706 ERROR --FAILED--  we unable to create the customer for user id  None because there is a customer with the same Phone number 0502111201
+2022-02-04 03:16:34.853381 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:16:34.853381 DEBUG Adding customer is about to happen
+2022-02-04 03:17:28.908293 INFO --Sucsses-- the user "akj"  was created successfully, his details: email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:17:28.908293 DEBUG Adding customer is about to happen
+2022-02-04 03:18:07.172372 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:18:07.172372 DEBUG Adding customer is about to happen
+2022-02-04 03:20:51.218175 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:20:51.218175 DEBUG Adding customer is about to happen
+2022-02-04 03:21:57.700979 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:21:57.700979 DEBUG Adding customer is about to happen
+2022-02-04 03:21:57.702979 CRITICAL --FAILED-- We unable to create  the user "akj"
+2022-02-04 03:22:35.702573 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:22:35.702573 DEBUG Adding customer is about to happen
+2022-02-04 03:23:21.387493 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:23:21.388494 DEBUG Adding customer is about to happen
+2022-02-04 03:23:35.167360 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:23:35.167360 DEBUG Adding customer is about to happen
+2022-02-04 03:23:58.261837 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:23:58.261837 DEBUG Adding customer is about to happen
+2022-02-04 03:24:40.116622 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:24:40.116622 DEBUG Adding customer is about to happen
+2022-02-04 03:24:54.940535 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:24:54.940535 DEBUG Adding customer is about to happen
+2022-02-04 03:24:54.944535 ERROR --FAILED--  we unable to create the customer for user id  11 because there is a customer with the same Phone number 0502111201
+2022-02-04 03:25:09.412593 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:25:09.412593 DEBUG Adding customer is about to happen
+2022-02-04 03:25:09.414591 ERROR --FAILED--  we unable to create the customer for user id  11 because there is a customer with the same Phone number 0502111201
+2022-02-04 03:32:42.576428 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:32:42.576428 DEBUG Adding customer is about to happen
+2022-02-04 03:33:00.871846 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:33:00.871846 DEBUG Adding customer is about to happen
+2022-02-04 03:33:34.065380 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:33:34.065380 DEBUG Adding customer is about to happen
+2022-02-04 03:34:08.170958 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:34:08.170958 DEBUG Adding customer is about to happen
+2022-02-04 03:34:34.506883 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:34:34.506883 DEBUG Adding customer is about to happen
+2022-02-04 03:34:34.510885 ERROR --FAILED--  we unable to create the customer for user id  11 because there is a customer with the same credit card number 123456
+2022-02-04 03:36:12.762044 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:36:12.762044 DEBUG Adding customer is about to happen
+2022-02-04 03:36:12.766044 ERROR --FAILED--  we unable to create the customer for user id  11 because there is a customer with the same credit card number 123456
+2022-02-04 03:46:29.572126 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:46:29.573126 DEBUG Adding customer is about to happen
+2022-02-04 03:46:29.577125 ERROR --FAILED--  we unable to create the customer for user id  11 because there is a customer with the same credit card number 123456
+2022-02-04 03:46:51.310352 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:46:51.310352 DEBUG Adding customer is about to happen
+2022-02-04 03:48:31.326942 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:48:31.326942 DEBUG Adding customer is about to happen
+2022-02-04 03:49:45.389438 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:49:45.389438 DEBUG Adding customer is about to happen
+2022-02-04 03:53:00.187731 INFO --Sucsses-- the user "akj"  was created successfully, his details:   user id:11 email:mor.ka@gmail.com, user role:2  
+2022-02-04 03:53:00.187731 DEBUG Adding customer is about to happen
+2022-02-04 03:53:00.191737 INFO --Sucsses-- the customer (3, 'soli', 'holy')   was created successfully, his details:   address:something, phone number:0502111202, credit card number:1234567  
