@@ -138,5 +138,5 @@ airfac=AirLineFacade(LoginToken(id=2, name='Mor', role=2))
 
 
 
-fli=Flight(id=3, origin_Country_id=3, destination_Country_id=2 )
+fli=Flight(id=3, origin_Country_id=3, destination_Country_id=5 )
 airfac.update_flight(fli)
