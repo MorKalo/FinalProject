@@ -1,0 +1,127 @@
+2022-02-04 16:10:25.870800 DEBUG update flight is about to happen
+2022-02-04 16:10:25.876799 ERROR --FAILED--  update by  flight id  3 failed because  the origin country 7 did not exist in our country DB
+2022-02-04 16:10:51.879249 DEBUG update flight is about to happen
+2022-02-04 16:10:51.884285 ERROR --FAILED--  update by  flight id  3 failed because  the destination country 8 did not exist in our country DB
+2022-02-04 16:11:01.497450 DEBUG update flight is about to happen
+2022-02-04 16:11:01.510450 INFO --Sucsses--  flight id  3  update details: 
+<id=3 airline_Company_Id=None origin_Country_id3         destination_Country_id = 5 departure_Time=None          landing_Time=None remaining_Tickets=None>
+2022-02-04 16:12:07.796527 DEBUG update flight is about to happen
+2022-02-04 16:12:07.804540 INFO --Sucsses--  flight id  3  update details: 
+<id=3 airline_Company_Id=None origin_Country_id3         destination_Country_id = 5 departure_Time=2022-03-01 03:00:00          landing_Time=2022-03-01 02:00:00 remaining_Tickets=None>
+2022-02-04 16:12:52.870750 DEBUG update flight is about to happen
+2022-02-04 16:12:52.880757 INFO --Sucsses--  flight id  3  update details: 
+<id=3 airline_Company_Id=None origin_Country_id3         destination_Country_id = 5 departure_Time=2022-03-01 03:00:00          landing_Time=2022-03-01 02:00:00 remaining_Tickets=None>
+2022-02-04 16:14:44.974155 DEBUG update flight is about to happen
+2022-02-04 16:14:44.986119 INFO --Sucsses--  flight id  3  update details: 
+<id=3 airline_Company_Id=None origin_Country_id3         destination_Country_id = 5 departure_Time=2022-03-01 03:00:00          landing_Time=2022-03-01 02:00:00 remaining_Tickets=None>
+2022-02-04 16:22:59.850040 DEBUG update flight is about to happen
+2022-02-04 16:24:07.343499 DEBUG update flight is about to happen
+2022-02-04 16:26:07.630291 DEBUG update flight is about to happen
+2022-02-04 16:28:04.546254 DEBUG update flight is about to happen
+2022-02-04 16:31:17.379961 DEBUG update flight is about to happen
+2022-02-04 16:31:40.907265 DEBUG update flight is about to happen
+2022-02-04 16:32:41.296729 DEBUG update flight is about to happen
+2022-02-04 17:30:26.587624 INFO --Sucsses-- the password is match for user "Moti"
+2022-02-04 17:30:26.587624 INFO --Sucsses-- the user "Moti" transferred to Admin Facade  
+2022-02-04 17:37:44.656015 DEBUG update customer is about to happen
+2022-02-04 17:39:47.389561 DEBUG update customer is about to happen
+2022-02-04 17:41:05.749306 DEBUG update customer is about to happen
+2022-02-04 17:41:24.275379 DEBUG update customer is about to happen
+2022-02-04 17:42:21.903756 DEBUG update customer is about to happen
+2022-02-05 00:55:45.227990 DEBUG add new airline is about to happen
+2022-02-05 00:56:57.960206 DEBUG add new airline is about to happen
+2022-02-05 00:56:57.960206 ERROR --FAILED--   User role need to be "AIRLINE" but we get 2 .
+2022-02-05 00:57:08.754827 DEBUG add new airline is about to happen
+2022-02-05 01:01:05.437607 DEBUG add new airline is about to happen
+2022-02-05 01:01:41.296292 DEBUG add new airline is about to happen
+2022-02-05 01:01:54.036843 DEBUG add new airline is about to happen
+2022-02-05 01:04:35.899275 DEBUG add new airline is about to happen
+2022-02-05 01:09:17.516408 DEBUG add new airline is about to happen
+2022-02-05 01:11:33.681661 ERROR --FAILED--   The username "MorMor"  is alrady exist 
+2022-02-05 01:12:11.711860 INFO --Sucsses-- the user "hololo"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:13:24.934075 INFO --Sucsses-- the user "hololo"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:13:24.935038 ERROR --FAILED--   The username "hololo"  is alrady exist 
+2022-02-05 01:13:54.361169 INFO --Sucsses-- the user "hololo"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:13:54.362169 ERROR --FAILED--   The username "hololo"  is alrady exist 
+2022-02-05 01:14:18.859697 INFO --Sucsses-- the user "hololo"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:14:18.860697 ERROR --FAILED--   The username "hololo"  is alrady exist 
+2022-02-05 01:14:35.769262 INFO --Sucsses-- the user "hololo"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:14:35.769262 ERROR --FAILED--   The username "hololo"  is alrady exist 
+2022-02-05 01:15:57.140786 INFO --Sucsses-- the user "hololo"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:15:57.141786 ERROR --FAILED--   The username "hololo"  is alrady exist 
+2022-02-05 01:16:47.266397 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:16:47.267438 ERROR --FAILED--   The username "hololol"  is alrady exist 
+2022-02-05 01:18:31.854146 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:18:31.855144 ERROR --FAILED--   The username "hololol"  is alrady exist 
+2022-02-05 01:19:15.649753 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:19:15.650747 ERROR --FAILED--   The username "hololol"  is alrady exist 
+2022-02-05 01:21:11.235765 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:22:06.413572 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:22:06.414572 DEBUG add new airline is about to happen
+2022-02-05 01:22:37.612099 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:22:37.612099 DEBUG add new airline is about to happen
+2022-02-05 01:24:25.748331 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:24:25.749332 DEBUG add new airline is about to happen
+2022-02-05 01:24:25.754333 INFO --Sucsses--  User created: 
+<id=11 username=hololol password=a1234 email=tokok@gmail.com         user_role=1 >, Airline created: 
+<id=6 name=hololo country_id=3 user_id=11 >
+2022-02-05 01:25:44.850538 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:1  
+2022-02-05 01:25:44.850538 DEBUG add new airline is about to happen
+2022-02-05 01:25:44.857547 INFO --Sucsses--  User created: 
+<id=11 username=hololol password=a1234 email=tokok@gmail.com         user_role=1 >, Airline created: 
+<id=6 name=hololo country_id=3 user_id=11 >
+2022-02-05 01:53:37.609609 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:3  
+2022-02-05 01:53:37.609609 DEBUG add new admin is about to happen
+2022-02-05 01:53:37.612610 INFO --Sucsses--  User created: 
+<id=11 username=hololol password=a1234 email=tokok@gmail.com         user_role=3 >, Administrator created: 
+<id=3 first_name=ziva last_name=sides user_id=11 >
+2022-02-05 02:00:50.081114 INFO --Sucsses-- the user "hololol"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:3  
+2022-02-05 02:00:50.081114 DEBUG add new admin is about to happen
+2022-02-05 02:00:50.084112 INFO --Sucsses--  User created: 
+<id=11 username=hololol password=a1234 email=tokok@gmail.com         user_role=3 >, Administrator created: 
+<id=3 first_name=ziva last_name=sides user_id=11 >
+2022-02-05 02:01:28.507687 INFO --Sucsses-- the user "dsdssd"  was created successfully, his details:   user id:11 email:tokok@gmail.com, user role:3  
+2022-02-05 02:01:28.507687 DEBUG add new admin is about to happen
+2022-02-05 02:01:28.511687 INFO --Sucsses--  User created: 
+<id=11 username=dsdssd password=a1234 email=tokok@gmail.com         user_role=3 >, Administrator created: 
+<id=3 first_name=shiri last_name=gol address=None         phone_number=1234567 credit_card_no=324234 user_id=11>
+2022-02-05 02:07:46.989564 ERROR --FAILED--   The username "MorMor"  is alrady exist 
+2022-02-05 02:15:43.617663 ERROR --FAILED--   The username "MorMor"  is alrady exist 
+2022-02-05 02:20:34.832709 DEBUG remove airline is about to happen
+2022-02-05 02:21:35.560875 DEBUG remove airline is about to happen
+2022-02-05 02:23:05.731796 DEBUG remove airline is about to happen
+2022-02-05 02:23:39.993468 DEBUG remove airline is about to happen
+2022-02-05 02:24:24.600370 DEBUG remove airline is about to happen
+2022-02-05 02:24:44.515521 DEBUG remove airline is about to happen
+2022-02-05 02:25:26.787889 DEBUG remove airline is about to happen
+2022-02-05 02:34:58.021546 DEBUG remove airline is about to happen
+2022-02-05 03:22:26.599340 DEBUG remove airline is about to happen
+2022-02-05 03:22:38.812888 DEBUG remove airline is about to happen
+2022-02-05 03:26:18.040795 DEBUG remove customer is about to happen
+2022-02-05 03:26:53.847354 DEBUG remove customer is about to happen
+2022-02-05 03:26:53.850361 INFO --Sucsses--  customer id 2 is removed
+2022-02-05 03:27:20.465888 DEBUG remove customer is about to happen
+2022-02-05 03:30:52.942955 DEBUG remove administrator is about to happen
+2022-02-05 03:31:10.255356 DEBUG remove administrator is about to happen
+2022-02-05 03:31:10.258948 INFO --Sucsses--  customer id 1 is removed
+2022-02-05 03:31:57.814323 DEBUG remove administrator is about to happen
+2022-02-05 03:31:57.817319 INFO --Sucsses--  administrator id 1 is removed
+2022-02-05 18:14:57.197578 ERROR --FAILED-- we cant find customer id 3
+2022-02-05 18:14:57.289747 ERROR --FAILED-- we cant find customer id 1
+2022-02-05 18:20:36.681592 ERROR --FAILED-- we cant find customer id 3
+2022-02-05 18:20:36.807592 ERROR --FAILED-- we cant find customer id 1
+2022-02-05 18:24:03.645940 ERROR --FAILED-- we cant find customer id 3
+2022-02-05 18:24:03.756100 ERROR --FAILED-- we cant find customer id 1
+2022-02-05 18:26:47.337791 ERROR --FAILED-- we cant find customer id 3
+2022-02-05 18:26:47.448997 ERROR --FAILED-- we cant find customer id 1
+2022-02-05 18:33:09.618584 DEBUG start get_tickets_by_customer func.
+2022-02-05 18:33:09.687589 ERROR --FAILED-- we cant find customer id 1
+2022-02-05 18:33:39.444307 DEBUG start get_tickets_by_customer func.
+2022-02-05 18:33:39.446301 INFO --SUCCESS--  get ticket by customer id  1 is finish Successfully
+2022-02-05 18:34:44.109968 DEBUG start get_tickets_by_customer func.
+2022-02-05 18:34:44.111968 INFO --SUCCESS--  get ticket by customer id  1 is finish Successfully
+2022-02-05 18:34:50.544622 ERROR --FAILED-- we cant find customer id 3
+2022-02-05 18:37:27.148300 ERROR --FAILED-- we cant find customer id 3
+2022-02-05 18:38:21.215058 ERROR --FAILED-- we cant find customer id 3
+2022-02-05 18:38:55.077442 ERROR --FAILED-- we cant find customer id 3
+2022-02-05 18:41:44.496740 ERROR --FAILED-- we cant find customer id 5
