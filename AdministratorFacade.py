@@ -1,3 +1,4 @@
+#need to insert token. remove airline dont work.
 import logging
 from BaseFacade import BaseFacade
 from Db_config import local_session, create_all_entities
@@ -9,6 +10,7 @@ from User import User
 from Country import Country
 from LoginToken import LoginToken
 from AnonymusFacade import AnonymusFacade
+from Flight import Flight
 
 
 class AdministratorFacade(BaseFacade):
@@ -129,18 +131,46 @@ class AdministratorFacade(BaseFacade):
                     return
 
 
+    def get_flights_by_airlinecompany(self, airline):
+        return  self.repo.get_by_condition(Flight, Flight.airline_Company_Id==airline).all()
+
+    #i cant remove airline if there is flight for this airline id.
     def remove_airline(self, airline_id):#remove by airline id
         self.repo.print_to_log(logging.DEBUG, f'remove airline is about to happen')
         if not self.repo.get_by_condition(AirlineCompany,
                                           lambda query: query.filter(AirlineCompany.id == airline_id).all()):
             print('Failed, we cant find this airline number')
             self.repo.print_to_log(logging.ERROR,
-                        f'--FAILED--  {airline_id}  we cant find {airline_id} airline number')
+                        f'--FAILED--    we cant find {airline_id} airline number')
         else:
-            verify=input(f'Are you sure you want to remove airline id {airline_id}? if you sure insert the airline id again: ')
-            if verify==airline_id:
-                self.repo.print_to_log(logging.DEBUG, f'varify succeeded')
-                self.repo.delete(AirlineCompany, airline_id)
-                self.repo.print_to_log(logging.INFO,
+            self.repo.delete(AirlineCompany, airline_id)
+            self.repo.print_to_log(logging.INFO,
                                    f'--Sucsses--  airline company id {airline_id} is removed')
+
+
+    #i cant remove customer if there is ticket for this customer id.
+    def remove_customer(self, customer_id):#remove by customer id
+        self.repo.print_to_log(logging.DEBUG, f'remove customer is about to happen')
+        if not self.repo.get_by_condition(Customer,
+                                          lambda query: query.filter(Customer.id == customer_id).all()):
+            print('Failed, we cant find this customer id number')
+            self.repo.print_to_log(logging.ERROR,
+                        f'--FAILED--    we cant find {customer_id} customer id')
+        else:
+            self.repo.delete(Customer, customer_id)
+            self.repo.print_to_log(logging.INFO,
+                                   f'--Sucsses--  customer id {customer_id} is removed')
+
+ #WORK GOOOD
+    def remove_administrator(self, administrator_id):#remove by administrator id
+        self.repo.print_to_log(logging.DEBUG, f'remove administrator is about to happen')
+        if not self.repo.get_by_condition(Administrator,
+                                          lambda query: query.filter(Administrator.id == administrator_id).all()):
+            print('Failed, we cant find this administrator id number')
+            self.repo.print_to_log(logging.ERROR,
+                        f'--FAILED--    we cant find {administrator_id} administrator id')
+        else:
+            self.repo.delete(Administrator, administrator_id)
+            self.repo.print_to_log(logging.INFO,
+                                   f'--Sucsses--  administrator id {administrator_id} is removed')
 
