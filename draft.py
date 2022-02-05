@@ -74,6 +74,25 @@ print('> 60,000', repo.get_by_condition(Company, lambda query: query.filter(Comp
 #      super().add_airline(airline)'''''''''''''''''''''
 
 
+def add_user(self, user):  # NEED TO DO EXCEPTION UserAlreadyExistException
+    self.repo.print_to_log(logging.DEBUG, f'add new airline is about to happen')
+    email = self.repo.get_by_condition(User, lambda query: query.filter(User.email == user.email).all())
+    username = self.repo.get_by_condition(User, lambda query: query.filter(User.username == user.username).all())
+    self.repo.print_to_log(logging.DEBUG, f'check details for user first')
+    if email:
+        print('Failed.  we already have user with this Email.')
+        self.repo.print_to_log(logging.ERROR,
+                               f'--FAILED--  {email} we already have user with this Email')
+        return
+    elif username:
+        print('Failed.  we already have user with this User name.')
+        self.repo.print_to_log(logging.ERROR,
+                               f'--FAILED--  {username}  we already have user with this User name.')
+        return
+    else:
+        self.repo.add(user)
+        self.repo.print_to_log(logging.INFO,
+                               f'--Sucsses--  user created: {user}')
 
 
 
