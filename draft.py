@@ -67,8 +67,8 @@ print('> 60,000', repo.get_by_condition(Company, lambda query: query.filter(Comp
 #    def remove_customer(self, customer_id):
 #        self.repo.delete(Customer, customer_id)
 
-#    def remove_airline(self, airline_id):
-#        self.repo.delete(AirlineCompany, airline_id)
+    def remove_airline(self, airline_id):
+        self.repo.delete(AirlineCompany, airline_id)
 
  #   def add_airline(self, airline):
 #      super().add_airline(airline)'''''''''''''''''''''

@@ -91,15 +91,15 @@ class AdministratorFacade(BaseFacade):
             self.repo.print_to_log(logging.ERROR,
                                    f'--FAILED--   we cant create this user "{user}" and Administrator{customer} .')
 
-    def add_customer(self, user, customer):  # IF there is a error because one of the unique fields, delete the user?
-            if not self.create_new_user(user):
-                print('We unable to create  the user, please check the data and try again later ')
-                self.repo.print_to_log(logging.CRITICAL,
-                                       f'--FAILED-- We unable to create  the user "{user.username}"')
-                return
-            else:
-                self.repo.print_to_log(logging.DEBUG, f'Adding customer is about to happen')
 
+    def add_customer(self, user, customer):  # IF there is a error because one of the unique fields, delete the user?
+#            if not self.create_new_user(user):
+#                print('We unable to create  the user, please check the data and try again later ')
+#                self.repo.print_to_log(logging.CRITICAL,
+#                                       f'--FAILED-- We unable to create  the user "{user.username}"')
+#                return
+#            else:
+#                self.repo.print_to_log(logging.DEBUG, f'Adding customer is about to happen')
                 # trying to find this customer in Customer, and to check if there isnt another customer
                 # with does deatils:
                 # Phone number
@@ -127,3 +127,20 @@ class AdministratorFacade(BaseFacade):
                                            f'   was created successfully, his details:   address:{customer.address},'
                                            f' phone number:{customer.phone_number}, credit card number:{customer.credit_card_no}  ')
                     return
+
+
+    def remove_airline(self, airline_id):#remove by airline id
+        self.repo.print_to_log(logging.DEBUG, f'remove airline is about to happen')
+        if not self.repo.get_by_condition(AirlineCompany,
+                                          lambda query: query.filter(AirlineCompany.id == airline_id).all()):
+            print('Failed, we cant find this airline number')
+            self.repo.print_to_log(logging.ERROR,
+                        f'--FAILED--  {airline_id}  we cant find {airline_id} airline number')
+        else:
+            verify=input(f'Are you sure you want to remove airline id {airline_id}? if you sure insert the airline id again: ')
+            if verify==airline_id:
+                self.repo.print_to_log(logging.DEBUG, f'varify succeeded')
+                self.repo.delete(AirlineCompany, airline_id)
+                self.repo.print_to_log(logging.INFO,
+                                   f'--Sucsses--  airline company id {airline_id} is removed')
+
