@@ -15,9 +15,10 @@ from Flight import Flight
 
 class AdministratorFacade(BaseFacade):
 
-    def __init__(self):
+    def __init__(self, logintoken):
         self.repo=DbRepo(local_session)
-        #self.token=token
+        self.logintoken = logintoken
+
 
     def get_all_customers(self):#finish and check
         self.repo.print_to_log(logging.DEBUG, f'get all customer"s is about to happen')

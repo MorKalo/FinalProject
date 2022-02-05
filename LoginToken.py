@@ -1,19 +1,19 @@
 class LoginToken:
 
     def __init__(self, id, name, role):
-        self.__id=id
-        self.__name=name
-        self.__role=role
+        self._id=id
+        self._name=name
+        self._role=role
 
     @property
     def id(self):
-        return print(self.__id)
+        return self._id
 
     @property
     def name(self):
-        return print(self.__name)
+        return self._name
 
     @property
     def role(self):
-        return print(self.__role)
+        return self._role
 

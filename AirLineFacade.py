@@ -13,9 +13,9 @@ from Country import Country
 
 class AirLineFacade(AnonymusFacade):
 
-    def __init__(self, login_token):
+    def __init__(self, logintoken):
         self.repo=DbRepo(local_session)
-        #self.login_token =login_token
+        self.logintoken = logintoken
 
 
     def get_flights_by_airline(self, airline_id): #buy id

@@ -16,9 +16,9 @@ from AnonymusFacade import AnonymusFacade
 
 class CustomerFacade(AnonymusFacade):
 
-    def __init__(self, token):
+    def __init__(self, logintoken):
         self.repo=DbRepo(local_session)
-        self.token=token
+        self.logintoken = logintoken
 
 
     def update_customer(self, customer):#func check + log
@@ -115,7 +115,7 @@ class CustomerFacade(AnonymusFacade):
 
     # CHECK: func + log
     def get_tickets_by_customer(self, customer_id):#FUNC BY ID
-        self.repo.print_to_log(logging.DEBUG, f'start Get_tickets_by_customer func.')
+        self.repo.print_to_log(logging.DEBUG, f'start get_tickets_by_customer func.')
         checkcustomer=self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.id==customer_id).all())
         if not checkcustomer:
             print(f' Failed. We cant find this customer id')
@@ -125,7 +125,6 @@ class CustomerFacade(AnonymusFacade):
             self.repo.print_to_log(logging.INFO,
                        f'--SUCCESS--  get ticket by customer id  {customer_id} is finish Successfully')
             return self.repo.get_by_condition(Ticket, lambda query:query.filter(Ticket.customer_id==customer_id).all())
-
 
 
 

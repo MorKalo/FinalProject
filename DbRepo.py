@@ -98,8 +98,7 @@ class DbRepo:
         result = cond(query_result)
         return result
 
-
-    def deleteAllTasks(self):
+    def drop_all_table(self):
         self.local_session.execute(f'DROP TABLE {"countries"} cascade')
         self.local_session.execute(f'DROP TABLE {"flights"} cascade')
         self.local_session.execute(f'DROP TABLE {"airline_companies"} cascade')
