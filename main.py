@@ -27,10 +27,12 @@ repo = DbRepo(local_session)
 #init.insert_test_db()
 #repo.deleteAllTasks()
 
-cust=CustomerFacade(LoginToken(id=2, name='Mor', role=2))
-cust.print_token()
+#cust=CustomerFacade(LoginToken(id=2, name='Mor', role=2))
+#cust.print_token()
 
-
+#admin=AdministratorFacade()
+annas=AnonymusFacade()
+annas.login(username='turkish', password='97')
 
 
 #cust.get_tickets_by_customer(1)

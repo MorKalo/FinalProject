@@ -9,7 +9,6 @@ from AirlineCompany import AirlineCompany
 from User import User
 from Country import Country
 from LoginToken import LoginToken
-from AnonymusFacade import AnonymusFacade
 from Flight import Flight
 
 

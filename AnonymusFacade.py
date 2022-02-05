@@ -10,6 +10,11 @@ from UserAlreadyExistException import *
 from User import User
 from AirlineCompany import AirlineCompany
 from LoginToken import LoginToken
+from AirLineFacade import  AirLineFacade
+from AdministratorFacade import AdministratorFacade
+from CustomerFacade import  CustomerFacade
+
+
 
 
 class AnonymusFacade(BaseFacade):
@@ -38,19 +43,24 @@ class AnonymusFacade(BaseFacade):
                 if user[0].user_role == 1:
                     self.repo.print_to_log(logging.INFO,
                                            f'--Sucsses-- the user "{username}" transferred to Airline Facade  ')
-                    airname=self.repo.get_by_condition(AirlineCompany, lambda query: query.filter(AirlineCompany.user_id == user[0].id).all())
-                    return AirLineFacade(LoginToken(user[0].id, airname[0].name, user[0].user_role))
+                    airline_=self.repo.get_by_condition(AirlineCompany, lambda query: query.filter(AirlineCompany.user_id == user[0].id).all())
+                    login_token = LoginToken(id=airline_[0].id, name=airline_[0].name, role=1)
+                    print(f' the token is: {login_token.id, login_token.name, login_token.role}')
+                    return (AirLineFacade(login_token))
                 elif user[0].user_role == 2:
                     self.repo.print_to_log(logging.INFO,
                                            f'--Sucsses-- the user "{username}" transferred to Customer Facade  ')
-                    custname=self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.user_id == user[0].id).all())
-                    return CustomerFacade(LoginToken(user[0].id, custname[0].first_name, user[0].user_role))
+                    customer_=self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.user_id == user[0].id).all())
+                    login_token = LoginToken(id=customer_[0].id, name=customer_[0].first_name, role=2)
+                    print(f' the token is: {login_token.id, login_token.name, login_token.role}')
+                    return (CustomerFacade(login_token))
                 elif user[0].user_role == 3:
                     self.repo.print_to_log(logging.INFO,
                                            f'--Sucsses-- the user "{username}" transferred to Admin Facade  ')
-                    name= self.repo.get_by_condition(Administrator, lambda query: query.filter(Administrator.user_id == user[0].id).all())
-                    return AdministratorFacade(
-                        LoginToken(user[0].id, name[0].first_name, user[0].user_role))
+                    admin= self.repo.get_by_condition(Administrator, lambda query: query.filter(Administrator.user_id == user[0].id).all())
+                    login_token = LoginToken(id=admin[0].id, name=admin[0].first_name, role=3)
+                    #print(f' the token is: {login_token.id, login_token.name, login_token.role}')
+                    return (AdministratorFacade(login_token))
 
 
     def create_new_user(self, user):
@@ -69,5 +79,3 @@ class AnonymusFacade(BaseFacade):
             self.repo.print_to_log(logging.INFO,
             f'--Sucsses-- the user "{user.username}"  was created successfully, his details:   user id:{user.id} email:{user.email}, user role:{user.user_role}  ')
             return True
-
-

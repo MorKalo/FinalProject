@@ -11,10 +11,9 @@ from FlightNotFound import FlightNotFound
 from NoMoreTicketsForFlightsException import NoMoreTicketsForFlightsException
 from TicketNotFoundException import TicketNotFoundException
 from LoginToken import LoginToken
-from AnonymusFacade import AnonymusFacade
 
 
-class CustomerFacade(AnonymusFacade):
+class CustomerFacade(BaseFacade):
 
     def __init__(self, logintoken):
         self.repo=DbRepo(local_session)

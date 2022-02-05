@@ -13,9 +13,9 @@ class Customer(Base):
     address=Column(String())
     phone_number=Column(String(), unique=True)
     credit_card_no=Column(String(), unique=True)
-    user_id=Column(BigInteger,  ForeignKey('users.id'), unique=True)
+    user_id=Column(BigInteger,  ForeignKey('users.id', ondelete='CASCADE'), unique=True)
 
-    customer_users=relationship('User',foreign_keys=[user_id], backref=backref("customer_user", uselist=True))
+    customer_users=relationship('User',foreign_keys=[user_id], backref=backref("customer_user", uselist=True, passive_deletes=True))
 
 
     def __repr__(self):

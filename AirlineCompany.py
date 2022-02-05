@@ -10,11 +10,11 @@ class AirlineCompany(Base):
 
     id = Column(BigInteger(), primary_key=True, autoincrement=True)
     name= Column(String(), unique=True)
-    country_id=Column(Integer, ForeignKey ('countries.id'))
-    user_id=Column(BigInteger(), ForeignKey ('users.id'),  unique=True)
+    country_id=Column(Integer, ForeignKey ('countries.id', ondelete='CASCADE'))
+    user_id=Column(BigInteger(), ForeignKey ('users.id', ondelete='CASCADE'),  unique=True)
 
-    countries = relationship('Country', backref=backref("airline_country", uselist=True))
-    airline_users=relationship('User',foreign_keys=[user_id], backref=backref("airline_user", uselist=True))
+    countries = relationship('Country', backref=backref("airline_country", uselist=True, passive_deletes=True))
+    airline_users=relationship('User',foreign_keys=[user_id], backref=backref("airline_user", uselist=True, passive_deletes=True))
 
 
     def __repr__(self):

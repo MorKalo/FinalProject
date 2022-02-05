@@ -9,9 +9,9 @@ class Administrator(Base):
     id = Column(BigInteger(), primary_key=True, autoincrement=True)
     first_name= Column(String())
     last_name=Column(String())
-    user_id=Column(BigInteger(), ForeignKey ('users.id'),nullable=False, unique=True)
+    user_id=Column(BigInteger(), ForeignKey ('users.id', ondelete='CASCADE'),nullable=False, unique=True)
 
-    admin_users=relationship('User',foreign_keys=[user_id], backref=backref("administrator_user", uselist=True))
+    admin_users=relationship('User',foreign_keys=[user_id], backref=backref("administrator_user", uselist=True, passive_deletes=True))
 
 
     def __repr__(self):

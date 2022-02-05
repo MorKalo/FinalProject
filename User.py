@@ -11,9 +11,9 @@ class User(Base):
     username= Column(String(), unique=True)
     password=Column(String())
     email=Column(String(), unique=True)
-    user_role=Column(Integer, ForeignKey('user_roles.id'), nullable=False)
+    user_role=Column(Integer, ForeignKey('user_roles.id', ondelete='CASCADE'), nullable=False)
 
-    role=relationship('User_Roles', backref=backref('users', uselist=True))
+    role=relationship('User_Roles', backref=backref('users', uselist=True, passive_deletes=True))
 
 
     def __repr__(self):

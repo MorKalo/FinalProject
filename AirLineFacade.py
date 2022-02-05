@@ -1,17 +1,16 @@
 #need to adding token+ check the uptade func.
 import logging
-from BaseFacade import BaseFacade
 from Db_config import local_session, create_all_entities
 from DbRepo import DbRepo
 from AirlineCompany import AirlineCompany
 from Administrator import Administrator
 from Flight import Flight
 from Customer import Customer
-from AnonymusFacade import AnonymusFacade
 from LoginToken import LoginToken
 from Country import Country
+from BaseFacade import BaseFacade
 
-class AirLineFacade(AnonymusFacade):
+class AirLineFacade(BaseFacade):
 
     def __init__(self, logintoken):
         self.repo=DbRepo(local_session)

@@ -1,12 +1,10 @@
 #NEED TO FINISH: i need to add func get customer?
-
 from DbRepo import DbRepo
 from Db_config import local_session, create_all_entities
 from abc import ABC, abstractmethod
 from Flight import Flight
 from AirlineCompany import AirlineCompany
 from Country import Country
-
 repo = DbRepo(local_session)
 
 
