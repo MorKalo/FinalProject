@@ -361,3 +361,4 @@
 2022-02-06 16:19:17.379602 ERROR --FAILED--  update by  flight id  2 failed because  this destination country id  1and origin country id cant be the same
 2022-02-06 16:21:28.282632 DEBUG add new flight for airline company turkish id 2 is about to happen
 2022-02-06 16:21:28.285633 ERROR --FAILED--  update by  flight id  2 failed because  this destination country id  1and origin country id cant be the same
+2022-02-06 23:09:51.662155 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.

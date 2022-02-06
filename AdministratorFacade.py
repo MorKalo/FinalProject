@@ -9,7 +9,7 @@ from User import User
 from Country import Country
 from LoginToken import LoginToken
 from Flight import Flight
-from Usernotauthorized import Usernotauthorized
+from UsernotauthorizedException import UsernotauthorizedException
 
 
 
@@ -27,7 +27,7 @@ class AdministratorFacade(BaseFacade):
 
     def create_airline(self, user, airline):#user and airline are object
         if not self.logintoken.role == 3:
-            raise Usernotauthorized
+            raise UsernotauthorizedException
             return
         else:
             if super().create_new_user(user):
@@ -60,7 +60,7 @@ class AdministratorFacade(BaseFacade):
 
     def create_admin(self, user, administrator):#user and admin are object
         if not self.logintoken.role == 3:
-            raise Usernotauthorized
+            raise UsernotauthorizedException
             return
         else:
             if super().create_new_user(user):
@@ -83,7 +83,7 @@ class AdministratorFacade(BaseFacade):
 
     def create_customer(self, user, customer):#user and customer are object
         if not self.logintoken.role == 3:
-            raise Usernotauthorized
+            raise UsernotauthorizedException
             return
         else:
             if super().create_new_user(user):
@@ -128,7 +128,7 @@ class AdministratorFacade(BaseFacade):
             self.repo.print_to_log(logging.ERROR,
                                    f'--FAILED--    we cant find  this airline company id {airline_id}')
         elif self.logintoken.role != 3:
-                raise Usernotauthorized
+                raise UsernotauthorizedException
                 return
         self.repo.delete(AirlineCompany, airline_id)
         self.repo.print_to_log(logging.INFO,
@@ -142,7 +142,7 @@ class AdministratorFacade(BaseFacade):
             self.repo.print_to_log(logging.ERROR,
                                    f'--FAILED--    we cant find  this customer id {customer_id}')
         elif self.logintoken.role != 3:
-                raise Usernotauthorized
+                raise UsernotauthorizedException
                 return
         self.repo.delete(Customer, customer_id)
         self.repo.print_to_log(logging.INFO,
@@ -157,7 +157,7 @@ class AdministratorFacade(BaseFacade):
             self.repo.print_to_log(logging.ERROR,
                                    f'--FAILED--    we cant find  this admin id {admin_id}')
         elif self.logintoken.role != 3:
-                raise Usernotauthorized
+                raise UsernotauthorizedException
                 return
         self.repo.delete(Administrator, admin_id)
         self.repo.print_to_log(logging.INFO,

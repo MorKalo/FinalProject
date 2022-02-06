@@ -1,4 +1,4 @@
-class Usernotauthorized(Exception):
+class UsernotauthorizedException(Exception):
     def __init__(self, message='This user is not authorized to do this action'):
         #self.flight=flight
         self.message=message

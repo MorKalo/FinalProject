@@ -9,7 +9,7 @@ from Customer import Customer
 from LoginToken import LoginToken
 from Country import Country
 from BaseFacade import BaseFacade
-from Usernotauthorized import Usernotauthorized
+from UsernotauthorizedException import UsernotauthorizedException
 
 class AirLineFacade(BaseFacade):
 
@@ -31,7 +31,7 @@ class AirLineFacade(BaseFacade):
     def update_airline(self,airline): #update by object. #if i dont update some field, he gets None
         self.repo.print_to_log(logging.DEBUG, f'update airline is about to happen')
         if airline.id!=self.logintoken.id:
-            raise Usernotauthorized
+            raise UsernotauthorizedException
         #no need to check if the airline company is exists because the TOKEN.
         # trying to find this airline in Airline Company, and to check if there isnt another airline company
         # with this deatils:
@@ -55,7 +55,7 @@ class AirLineFacade(BaseFacade):
         self.repo.print_to_log(logging.DEBUG, f'add new flight for airline company {self.logintoken.name}'
                                               f' id {self.logintoken.id} is about to happen')
         if flight.airline_Company_Id != self.logintoken.id:
-            raise Usernotauthorized
+            raise UsernotauthorizedException
             return
         elif not self.repo.get_by_condition(Country,
                                             lambda query: query.filter(Country.id == flight.origin_Country_id).all()):
@@ -96,7 +96,7 @@ class AirLineFacade(BaseFacade):
 
     def update_flight(self, flight): #flight is object with airline company id
         if flight.airline_Company_Id != self.logintoken.id:
-            raise Usernotauthorized
+            raise UsernotauthorizedException
             return
         else:
             self.repo.print_to_log(logging.DEBUG, f'update flight number {flight.id} is about to happen')
@@ -158,7 +158,7 @@ class AirLineFacade(BaseFacade):
                                    f'--FAILED--    we cant find  flight number {flight_id}')
         elif self.logintoken.role != 3:
             if airline_id != self.logintoken.id:
-                raise Usernotauthorized
+                raise UsernotauthorizedException
                 return
         self.repo.delete(Flight, flight_id)
         self.repo.print_to_log(logging.INFO,

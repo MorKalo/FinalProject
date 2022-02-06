@@ -11,7 +11,7 @@ from FlightNotFound import FlightNotFound
 from NoMoreTicketsForFlightsException import NoMoreTicketsForFlightsException
 from TicketNotFoundException import TicketNotFoundException
 from LoginToken import LoginToken
-from Usernotauthorized import Usernotauthorized
+from UsernotauthorizedException import UsernotauthorizedException
 
 
 class CustomerFacade(BaseFacade):
@@ -23,7 +23,7 @@ class CustomerFacade(BaseFacade):
 
     def update_customer(self,customer_id,update_data):#input from user only the data that we want to update.
         if customer_id!=self.logintoken.id:
-            raise Usernotauthorized #need to check the token
+            raise UsernotauthorizedException #need to check the token
         #customer_id=self.logintoken.id
         self.repo.print_to_log(logging.DEBUG, f'update customer is about to happen')
         original_customer = self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.id == customer_id).all())
@@ -80,7 +80,7 @@ class CustomerFacade(BaseFacade):
         customer = self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.id == ticket.customer_id).all())
         if self.logintoken.role!=3:
             if customer[0].id!= self.logintoken.id:
-                raise Usernotauthorized
+                raise UsernotauthorizedException
                 return
         if not customer:
             print('Failed, we cant find customer with this ID number.')
@@ -103,7 +103,7 @@ class CustomerFacade(BaseFacade):
         tickedetails = self.repo.get_by_condition(Ticket, lambda query: query.filter(Ticket.id == ticket_id).all())
         if self.logintoken.role!=3:
             if tickedetails[0].customer_id!= self.logintoken.id:
-                raise Usernotauthorized
+                raise UsernotauthorizedException
                 return
         self.repo.print_to_log(logging.DEBUG, f'removing ticket by {self.logintoken.name} id {self.logintoken.id} is about to happen.')
         ticket_exists = self.repo.get_by_condition(Ticket, lambda query: query.filter(Ticket.id == ticket_id).all())
@@ -121,7 +121,7 @@ class CustomerFacade(BaseFacade):
             self.repo.print_to_log(logging.INFO, f'--SUCCESS--  remove ticket by {self.logintoken.name} id {self.logintoken.id}'
                                    f' for customer id  {Ticket.customer_id} to flight {ticket_id} is finish Successfully')
             self.repo.print_to_log(logging.DEBUG, f'there is more {flight[0].remaining_Tickets} ticket for flight {ticket_id}')
-
+            return True
 
     def get_my_tickets(self):#FUNC only for my id, take id from token
         self.repo.print_to_log(logging.DEBUG, f'start to get my tickets func for user_id{self.logintoken.id}.')
