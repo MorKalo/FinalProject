@@ -19,6 +19,3 @@ tick=Ticket(flight_id=2, customer_id=1)
 #cust.remove_ticket(1)
 cust.get_my_tickets()
 
-#airli=AirLineFacade(LoginToken(id=2, name='turkish', role=1))
-#mork=AirlineCompany(id=2, name='kkkkkkk' )
-#airli.update_airline(mork)

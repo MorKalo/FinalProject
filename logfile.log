@@ -320,3 +320,44 @@
 2022-02-06 14:59:50.096903 INFO --Sucsses--  flight  id 2 is removed
 2022-02-06 14:59:50.096903 DEBUG remove admin is about to happen
 2022-02-06 14:59:50.099901 INFO --Sucsses--  admin id 1 is removed
+2022-02-06 15:04:05.329923 DEBUG remove flight is about to happen
+2022-02-06 15:04:05.334923 INFO --Sucsses--  flight  id 2 is removed
+2022-02-06 15:04:05.334923 DEBUG remove admin is about to happen
+2022-02-06 15:04:05.336923 INFO --Sucsses--  admin id 1 is removed
+2022-02-06 15:11:03.772489 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 15:11:03.775489 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 15:00:00 ,landing time: 2022-03-30 13:00:00
+2022-02-06 15:11:23.948215 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 15:11:23.951215 ERROR --FAILED--  remaining tickets = -3, need to be positive  at least 0 ticket for flight
+2022-02-06 15:20:53.252743 DEBUG update airline is about to happen
+2022-02-06 15:32:25.764410 DEBUG update airline is about to happen
+2022-02-06 15:32:47.016025 DEBUG update airline is about to happen
+2022-02-06 15:33:05.710318 DEBUG update airline is about to happen
+2022-02-06 15:33:35.307754 DEBUG update airline is about to happen
+2022-02-06 15:34:27.061453 DEBUG update airline is about to happen
+2022-02-06 15:34:39.667634 DEBUG update airline is about to happen
+2022-02-06 15:35:08.973131 DEBUG update airline is about to happen
+2022-02-06 15:46:25.851978 DEBUG update airline is about to happen
+2022-02-06 15:46:52.049735 DEBUG update airline is about to happen
+2022-02-06 15:49:22.651034 DEBUG update airline is about to happen
+2022-02-06 15:54:22.626760 DEBUG update airline is about to happen
+2022-02-06 15:55:01.087220 DEBUG update airline is about to happen
+2022-02-06 15:56:58.340619 DEBUG update airline is about to happen
+2022-02-06 15:57:08.244638 DEBUG update airline is about to happen
+2022-02-06 15:57:22.538863 DEBUG update airline is about to happen
+2022-02-06 15:57:36.765363 DEBUG update airline is about to happen
+2022-02-06 15:57:57.159783 DEBUG update airline is about to happen
+2022-02-06 15:59:05.057531 DEBUG update airline is about to happen
+2022-02-06 15:59:18.619147 DEBUG update airline is about to happen
+2022-02-06 15:59:18.623147 INFO --Sucsses--  Airline id  2  update details: 
+<id=2 name=Deltaj country_id=None user_id=None >
+2022-02-06 16:09:01.709439 DEBUG update airline is about to happen
+2022-02-06 16:09:01.713434 INFO --Sucsses--  Airline id  2  update details: 
+<id=2 name=Deltaj country_id=None user_id=None >
+2022-02-06 16:15:49.435658 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-06 16:17:34.000077 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-06 16:18:18.085233 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-06 16:18:18.088232 ERROR --FAILED--  update by  flight id  2 failed because  this destination country id  1and origin country id cant be the same
+2022-02-06 16:19:17.377603 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-06 16:19:17.379602 ERROR --FAILED--  update by  flight id  2 failed because  this destination country id  1and origin country id cant be the same
+2022-02-06 16:21:28.282632 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-06 16:21:28.285633 ERROR --FAILED--  update by  flight id  2 failed because  this destination country id  1and origin country id cant be the same

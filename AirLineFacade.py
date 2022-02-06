@@ -1,4 +1,4 @@
-#need to adding token+ check the uptade func.
+#check the uptade func.
 import logging
 from Db_config import local_session, create_all_entities
 from DbRepo import DbRepo
@@ -28,9 +28,9 @@ class AirLineFacade(BaseFacade):
         return print(flights)
 
 
-    def update_airline(self, airline): #update by object. #if i dont update some field, he gets None, DIDNT INSERT TOKEN
+    def update_airline(self,airline): #update by object. #if i dont update some field, he gets None
         self.repo.print_to_log(logging.DEBUG, f'update airline is about to happen')
-        if airline_id!=self.logintoken.id:
+        if airline.id!=self.logintoken.id:
             raise Usernotauthorized
         #no need to check if the airline company is exists because the TOKEN.
         # trying to find this airline in Airline Company, and to check if there isnt another airline company
@@ -51,7 +51,7 @@ class AirLineFacade(BaseFacade):
                                    f' {airline}')
 
 
-    def add_flight(self, flight):# flight is object with airline company id
+    def add_flight(self, flight):#flight is object with airline company id
         self.repo.print_to_log(logging.DEBUG, f'add new flight for airline company {self.logintoken.name}'
                                               f' id {self.logintoken.id} is about to happen')
         if flight.airline_Company_Id != self.logintoken.id:
@@ -72,12 +72,23 @@ class AirLineFacade(BaseFacade):
                                    f'--FAILED--  update by  flight id  {flight.id} '
                                    f'failed because  the destination country {flight.destination_Country_id} did not exist in'
                                    f' our country DB')
+        elif flight.origin_Country_id == flight.destination_Country_id:
+            print('Failed, This destination country id and origin country id cant be the same.')
+            self.repo.print_to_log(logging.ERROR,
+                                   f'--FAILED--  update by  flight id  {flight.id} '
+                                   f'failed because  this destination country id  {flight.destination_Country_id}'
+                                   f'and origin country id cant be the same')
         elif flight.departure_Time > flight.landing_Time:
             print(f' flight cant landing before departure')
             self.repo.print_to_log(logging.ERROR,
                               f'--FAILED--  update by  flight id  {flight.id} '
                                f'failed because  flight cant landing before departure. '
                                f' departure time: {flight.departure_Time} ,landing time: {flight.landing_Time}')
+        elif flight.remaining_Tickets<0:
+            print(f' at least 0 ticket for flight. remaining tickets need to be positive')
+            self.repo.print_to_log(logging.ERROR,
+                              f'--FAILED--  remaining tickets = {flight.remaining_Tickets}, need to be positive '
+                               f' at least 0 ticket for flight')
         else:
             self.repo.add(flight)
             return
@@ -109,14 +120,23 @@ class AirLineFacade(BaseFacade):
                                        f'--FAILED--  update by  flight id  {flight.id} '
                                        f'failed because  the destination country {flight.destination_Country_id} did not exist in'
                                        f' our country DB')
+            elif flight.origin_Country_id == flight.destination_Country_id:
+                print('Failed, This destination country id and origin country id cant be the same.')
+                self.repo.print_to_log(logging.ERROR,
+                                       f'--FAILED--  update by  flight id  {flight.id} '
+                                       f'failed because  this destination country id  {flight.destination_Country_id}'
+                                       f'and origin country id cant be the same')
             elif flight.departure_Time >= flight_[0].landing_Time:
                 print(f' flight cant landing before departure')
                 self.repo.print_to_log(logging.ERROR,
                                    f'--FAILED--  update by  flight id  {flight.id} '
                                    f'failed because  flight cant landing before departure. '
                                    f' departure time: {flight.departure_Time} ,landing time: {flight.landing_Time}')
-            elif flight(0).remaining_Tickets < 0:
-                print('you cant update minus remaining tickets')
+            elif flight.remaining_Tickets < 0:
+                print(f' at least 0 ticket for flight. remaining tickets need to be positive')
+                self.repo.print_to_log(logging.ERROR,
+                                       f'--FAILED--  remaining tickets = {flight.remaining_Tickets}, need to be positive '
+                                       f' at least 0 ticket for flight')
             else:
                 self.repo.update_by_id(Flight, flight.id, flight,
                                        {Flight.origin_Country_id: flight.origin_Country_id,
