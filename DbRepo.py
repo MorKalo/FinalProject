@@ -47,7 +47,7 @@ class DbRepo:
             .update(data)
         self.local_session.commit()
 
-    def update_by_id(self, table_class, id, data):  # data is a dictionary of all the new columns and values
+    def update_by_id(self, table_class, id, data):  # data is a dictionary.
         self.local_session.query(table_class).filter(table_class.id == id).update(data)
         self.local_session.commit()
 

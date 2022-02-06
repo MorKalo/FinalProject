@@ -151,3 +151,73 @@
 2022-02-05 21:29:15.856868 INFO --Sucsses-- the user "turkish" transferred to Airline Facade  
 2022-02-05 21:29:59.011242 INFO --Sucsses-- the password is match for user "turkish"
 2022-02-05 21:29:59.011242 INFO --Sucsses-- the user "turkish" transferred to Airline Facade  
+2022-02-05 21:36:52.878148 INFO --Sucsses-- the password is match for user "turkish"
+2022-02-05 21:36:52.878148 INFO --Sucsses-- the user "turkish" transferred to Airline Facade  
+2022-02-05 21:37:37.685129 INFO --Sucsses-- the password is match for user "turkish"
+2022-02-05 21:37:37.685129 INFO --Sucsses-- the user "turkish" transferred to Airline Facade  
+2022-02-05 21:37:51.013829 INFO --Sucsses-- the password is match for user "turkish"
+2022-02-05 21:37:51.013829 INFO --Sucsses-- the user "turkish" transferred to Airline Facade  
+2022-02-05 23:07:20.543302 DEBUG update customer is about to happen
+2022-02-05 23:12:56.693508 DEBUG update customer is about to happen
+2022-02-05 23:13:29.025743 DEBUG update customer is about to happen
+2022-02-05 23:14:26.349987 DEBUG update customer is about to happen
+2022-02-05 23:25:34.026532 DEBUG update customer is about to happen
+2022-02-05 23:29:43.476342 DEBUG update customer is about to happen
+2022-02-05 23:30:45.093444 DEBUG update customer is about to happen
+2022-02-05 23:31:08.842902 DEBUG update customer is about to happen
+2022-02-05 23:35:15.248028 DEBUG update customer is about to happen
+2022-02-05 23:35:43.628621 DEBUG update customer is about to happen
+2022-02-05 23:35:59.209721 DEBUG update customer is about to happen
+2022-02-05 23:37:24.497655 DEBUG update customer is about to happen
+2022-02-05 23:37:47.348409 DEBUG update customer is about to happen
+2022-02-05 23:38:25.436974 DEBUG update customer is about to happen
+2022-02-05 23:46:20.510002 DEBUG update airline is about to happen
+2022-02-05 23:46:20.551963 INFO --Sucsses--  Airline id  2  update details: 
+<id=2 name=kkkkkkk country_id=None user_id=None >
+2022-02-06 00:08:58.499153 DEBUG update customer is about to happen
+2022-02-06 00:13:36.494458 DEBUG update customer is about to happen
+2022-02-06 00:15:00.769423 DEBUG update customer is about to happen
+2022-02-06 00:15:00.816378 INFO --Sucsses--  customer id  2  update details: 
+<id=None first_name=None last_name=shlomki address=None         phone_number=0376526284 credit_card_no=None user_id=None>
+2022-02-06 00:32:29.256523 DEBUG adding ticket by shlomi, id 2, role2 is about to happen
+2022-02-06 00:32:43.849478 DEBUG adding ticket by shlomi, id 2, role2 is about to happen
+2022-02-06 00:32:43.894477 ERROR --FAILED-- customer id 2 already heve ticket for this flight number 2.
+2022-02-06 00:42:06.295482 DEBUG removing ticket by shlomi id 2 is about to happen.
+2022-02-06 00:42:06.302482 INFO --SUCCESS--  remove ticket by shlomi id 2 for customer id  Ticket.customer_id to flight 2 is finish Successfully
+2022-02-06 00:42:06.304519 DEBUG there is more 44 ticket for flight 2
+2022-02-06 01:02:54.735913 DEBUG removing ticket by shlomi id 1 is about to happen.
+2022-02-06 01:03:17.598798 DEBUG removing ticket by shlomi id 1 is about to happen.
+2022-02-06 01:03:17.604804 INFO --SUCCESS--  remove ticket by shlomi id 1 for customer id  Ticket.customer_id to flight 1 is finish Successfully
+2022-02-06 01:03:17.606804 DEBUG there is more 13 ticket for flight 1
+2022-02-06 01:10:05.173098 DEBUG start to get my tickets func.
+2022-02-06 01:10:05.173098 INFO --SUCCESS--  get ticket by customer shlomi  id  1 is finish Successfully
+2022-02-06 01:10:23.586468 DEBUG start to get my tickets func.
+2022-02-06 01:10:23.586468 INFO --SUCCESS--  get ticket by customer shlomi  id  1 is finish Successfully
+2022-02-06 01:10:48.886108 DEBUG start to get my tickets func.
+2022-02-06 01:10:48.886108 INFO --SUCCESS--  get ticket by customer shlomi  id  1 is finish Successfully
+2022-02-06 01:12:44.520228 DEBUG start to get my tickets func.
+2022-02-06 01:12:44.520228 INFO --SUCCESS--  get ticket by customer shlomi  id  1 is finish Successfully
+2022-02-06 01:13:45.582730 DEBUG start to get my tickets func.
+2022-02-06 01:13:45.582730 INFO --SUCCESS--  get ticket by customer shlomi  id  1 is finish Successfully
+2022-02-06 01:14:43.835230 DEBUG start to get my tickets func.
+2022-02-06 01:14:43.835230 INFO --SUCCESS--  get ticket by customer shlomi  id  1 is finish Successfully
+2022-02-06 01:22:39.405903 DEBUG get flight by airline, for airline company id  1 is about to happen
+2022-02-06 01:22:39.408903 INFO --SUCCESS--  get flights by airline company test  id  1 is finish Successfully
+2022-02-06 01:24:45.099111 DEBUG update flight is about to happen
+2022-02-06 02:07:21.282180 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:07:30.997315 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:08:14.671558 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:09:11.924037 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:10:07.035973 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:11:36.703337 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:18:15.169066 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:18:15.171061 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-06 02:19:04.486707 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:19:04.489702 ERROR --FAILED--  update by  flight id  None failed because  the destination country 5 did not exist in our country DB
+2022-02-06 02:21:46.958234 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:21:46.961235 ERROR --FAILED--  update by  flight id  None failed because  the destination country 5 did not exist in our country DB
+2022-02-06 02:21:53.914064 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:22:30.529265 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:22:30.533270 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 15:00:00 ,landing time: 2022-03-20 20:00:00
+2022-02-06 02:22:52.359710 DEBUG add new flight for airline company test id 1 is about to happen
+2022-02-06 02:22:52.362771 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 15:00:00 ,landing time: 2022-03-30 13:00:00

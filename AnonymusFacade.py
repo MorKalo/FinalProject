@@ -44,22 +44,19 @@ class AnonymusFacade(BaseFacade):
                     self.repo.print_to_log(logging.INFO,
                                            f'--Sucsses-- the user "{username}" transferred to Airline Facade  ')
                     airline_=self.repo.get_by_condition(AirlineCompany, lambda query: query.filter(AirlineCompany.user_id == user[0].id).all())
-                    login_token = LoginToken(id=airline_[0].id, name=airline_[0].name, role=1)
-                    print(f' the token is: {login_token.id, login_token.name, login_token.role}')
+                    login_token = LoginToken(id=airline_[0].id, name=airline_[0].name, role=user[0].user_role)
                     return (AirLineFacade(login_token))
                 elif user[0].user_role == 2:
                     self.repo.print_to_log(logging.INFO,
                                            f'--Sucsses-- the user "{username}" transferred to Customer Facade  ')
                     customer_=self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.user_id == user[0].id).all())
-                    login_token = LoginToken(id=customer_[0].id, name=customer_[0].first_name, role=2)
-                    print(f' the token is: {login_token.id, login_token.name, login_token.role}')
+                    login_token = LoginToken(id=customer_[0].id, name=customer_[0].first_name, role=user[0].user_role)
                     return (CustomerFacade(login_token))
                 elif user[0].user_role == 3:
                     self.repo.print_to_log(logging.INFO,
                                            f'--Sucsses-- the user "{username}" transferred to Admin Facade  ')
                     admin= self.repo.get_by_condition(Administrator, lambda query: query.filter(Administrator.user_id == user[0].id).all())
-                    login_token = LoginToken(id=admin[0].id, name=admin[0].first_name, role=3)
-                    #print(f' the token is: {login_token.id, login_token.name, login_token.role}')
+                    login_token = LoginToken(id=admin[0].id, name=admin[0].first_name, role=user[0].user_role)
                     return (AdministratorFacade(login_token))
 
 

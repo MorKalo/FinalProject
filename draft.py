@@ -204,3 +204,16 @@ airl=AirlineCompany(name='hololo', country_id=3)
 #cust1=Customer(first_name='shiri', last_name='gol', phone_number='1234567', credit_card_no='324234')
 #airf.create_customer(custu, cust1)
 adminf.remove_administrator(1)
+
+
+def get_my_tickets(self):  # FUNC BY ID
+    self.repo.print_to_log(logging.DEBUG, f'start to get my tickets func.')
+    checkcustomer = self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.id == customer_id).all())
+    if not checkcustomer:
+        print(f' Failed. We cant find this customer id')
+        self.repo.print_to_log(logging.ERROR,
+                               f'--FAILED-- we cant find customer id {customer_id}')
+    else:
+        self.repo.print_to_log(logging.INFO,
+                               f'--SUCCESS--  get ticket by customer id  {customer_id} is finish Successfully')
+        return self.repo.get_by_condition(Ticket, lambda query: query.filter(Ticket.customer_id == customer_id).all())
