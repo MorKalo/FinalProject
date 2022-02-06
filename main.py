@@ -30,7 +30,8 @@ init.insert_test_db()
 airfac=AirLineFacade(LoginToken(id=1, name='test', role=1))
 #airfac.get_my_flights()
 #airfac.update_flight(2, {'origin_country_id':3})
-fli2=Flight( airline_Company_Id=1, origin_Country_id=2, destination_Country_id=1,
-                         departure_Time=datetime(2022, 3, 30, 15, 0, 0),
-             landing_Time=datetime(2022, 3, 30, 13, 0, 0), remaining_Tickets=12)
-airfac.add_flight(fli2)
+#fli2=Flight( airline_Company_Id=1, origin_Country_id=2, destination_Country_id=1,
+  #                       departure_Time=datetime(2022, 3, 30, 15, 0, 0),
+ #            landing_Time=datetime(2022, 3, 30, 13, 0, 0), remaining_Tickets=12)
+#airfac.add_flight(fli2)
+airfac.remove_flight(1, 2)

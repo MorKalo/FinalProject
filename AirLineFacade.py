@@ -83,7 +83,7 @@ class AirLineFacade(BaseFacade):
             return
 
 
-    def update_flight(self, flight): #check with object  #DIDNT WORK
+    def update_flight(self, flight): #flight is object with airline company id
         if flight.airline_Company_Id != self.logintoken.id:
             raise Usernotauthorized
             return
@@ -129,3 +129,17 @@ class AirLineFacade(BaseFacade):
                                        f' {flight}')
 
 
+    def remove_flight(self, airline_id, flight_id): #remove by flight id
+        self.repo.print_to_log(logging.DEBUG, f'remove airline is about to happen')
+        if not self.repo.get_by_condition(Flight,
+                                              lambda query: query.filter(Flight.id == flight_id).all()):
+            print(f'Failed, we cant find  flight number {flight_id}')
+            self.repo.print_to_log(logging.ERROR,
+                                   f'--FAILED--    we cant find  flight number {flight_id}')
+        elif self.logintoken.role != 3:
+            if airline_id != self.logintoken.id:
+                raise Usernotauthorized
+                return
+        self.repo.delete(Flight, flight_id)
+        self.repo.print_to_log(logging.INFO,
+                                   f'--Sucsses--  airline company id {airline_id} is removed')

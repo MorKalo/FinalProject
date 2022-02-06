@@ -221,3 +221,16 @@
 2022-02-06 02:22:30.533270 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 15:00:00 ,landing time: 2022-03-20 20:00:00
 2022-02-06 02:22:52.359710 DEBUG add new flight for airline company test id 1 is about to happen
 2022-02-06 02:22:52.362771 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 15:00:00 ,landing time: 2022-03-30 13:00:00
+2022-02-06 02:33:45.939227 DEBUG remove airline is about to happen
+2022-02-06 02:34:21.126568 DEBUG remove airline is about to happen
+2022-02-06 02:36:01.778186 DEBUG remove airline is about to happen
+2022-02-06 02:39:03.869690 DEBUG remove airline is about to happen
+2022-02-06 02:39:32.939423 DEBUG remove airline is about to happen
+2022-02-06 02:40:35.377368 DEBUG remove airline is about to happen
+2022-02-06 02:40:35.380365 ERROR --FAILED--    we cant find  flight number 5
+2022-02-06 02:40:59.282714 DEBUG remove airline is about to happen
+2022-02-06 02:40:59.284709 ERROR --FAILED--    we cant find  flight number 5
+2022-02-06 02:41:07.899199 DEBUG remove airline is about to happen
+2022-02-06 02:41:07.905199 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 02:45:07.693809 DEBUG remove airline is about to happen
+2022-02-06 02:45:07.697810 INFO --Sucsses--  airline company id 1 is removed
