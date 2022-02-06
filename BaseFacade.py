@@ -1,10 +1,14 @@
 #NEED TO FINISH: i need to add func get customer?
+import logging
 from DbRepo import DbRepo
 from Db_config import local_session, create_all_entities
 from abc import ABC, abstractmethod
 from Flight import Flight
 from AirlineCompany import AirlineCompany
 from Country import Country
+from User import User
+from UserAlreadyExistException import UserAlreadyExistException
+
 repo = DbRepo(local_session)
 
 
@@ -69,7 +73,22 @@ class BaseFacade(ABC):
         print(self.repo.get_by_id(Country, id))
 
 
-
+    def create_new_user(self, user):
+        username=self.repo.get_by_condition(User, lambda query: query.filter(User.username == user.username).all())
+        if username:
+            self.repo.print_to_log(logging.ERROR,
+                                   f'--FAILED--   The username "{username[0].username}"  is alrady exist ')
+            raise UserAlreadyExistException()
+        else:
+            email=self.repo.get_by_condition(User, lambda query: query.filter(User.email == user.email).all())
+            if email:
+                print(f' Faild, the email {email[0].email} is alrady exist ')
+                self.repo.print_to_log(logging.ERROR,
+                                       f'--FAILED--   The email "{email[0].email}"  is alrady exist ')
+            self.repo.add(user)
+            self.repo.print_to_log(logging.INFO,
+            f'--Sucsses-- the user "{user.username}"  was created successfully, his details:   user id:{user.id} email:{user.email}, user role:{user.user_role}  ')
+            return True
 
 
 

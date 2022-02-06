@@ -217,3 +217,91 @@ def get_my_tickets(self):  # FUNC BY ID
         self.repo.print_to_log(logging.INFO,
                                f'--SUCCESS--  get ticket by customer id  {customer_id} is finish Successfully')
         return self.repo.get_by_condition(Ticket, lambda query: query.filter(Ticket.customer_id == customer_id).all())
+
+
+__________________________________________________--
+
+if not self.create_new_user(user):
+    print('We unable to create  the user, please check the data and try again later ')
+    self.repo.print_to_log(logging.CRITICAL,
+                           f'--FAILED-- We unable to create  the user "{user.username}"')
+    return
+else:
+    self.repo.print_to_log(logging.DEBUG, f'Adding customer is about to happen')
+    # trying to find this customer in Customer, and to check if there isnt another customer
+    # with does deatils:
+    # Phone number
+    if self.repo.get_by_condition(Customer, lambda query: query.filter(
+            Customer.phone_number == customer.phone_number).all()):
+        print('Failed, a customer with this phone number is already exists.')
+        self.repo.print_to_log(logging.ERROR,
+                               f'--FAILED--  we unable to create the customer for user id  {user.id}'
+                               f' because there is a customer with the same Phone number {customer.phone_number}')
+        return
+    # Credit-Card number
+    elif self.repo.get_by_condition(Customer, lambda query: query.filter(
+            Customer.credit_card_no == customer.credit_card_no).all()):
+        print('Failed, a customer with this credit card number is already exists.')
+        self.repo.print_to_log(logging.ERROR,
+                               f'--FAILED--  we unable to create the customer for user id  {user.id}'
+                               f' because there is a customer with the same credit card number {customer.credit_card_no}')
+        return
+    else:
+        customer.user_id = user.id  # getting the user id from the user we already create
+        self.repo.add(customer)
+        self.repo.update(User, user.id, {User.user_role: 2})
+        self.repo.print_to_log(logging.INFO,
+                               f'--Sucsses-- the customer {customer.id, customer.first_name, customer.last_name}'
+                               f'   was created successfully, his details:   address:{customer.address},'
+                               f' phone number:{customer.phone_number}, credit card number:{customer.credit_card_no}  ')
+        return
+
+
+def get_flights_by_airlinecompany(self, airline):
+    return self.repo.get_by_condition(Flight, Flight.airline_Company_Id == airline).all()
+
+    # i cant remove airline if there is flight for this airline id.
+
+
+def remove_airline(self, airline_id):  # remove by airline id
+    self.repo.print_to_log(logging.DEBUG, f'remove airline is about to happen')
+    if not self.repo.get_by_condition(AirlineCompany,
+                                      lambda query: query.filter(AirlineCompany.id == airline_id).all()):
+        print('Failed, we cant find this airline number')
+        self.repo.print_to_log(logging.ERROR,
+                               f'--FAILED--    we cant find {airline_id} airline number')
+    else:
+        self.repo.delete(AirlineCompany, airline_id)
+        self.repo.print_to_log(logging.INFO,
+                               f'--Sucsses--  airline company id {airline_id} is removed')
+
+    # i cant remove customer if there is ticket for this customer id.
+
+
+def remove_customer(self, customer_id):  # remove by customer id
+    self.repo.print_to_log(logging.DEBUG, f'remove customer is about to happen')
+    if not self.repo.get_by_condition(Customer,
+                                      lambda query: query.filter(Customer.id == customer_id).all()):
+        print('Failed, we cant find this customer id number')
+        self.repo.print_to_log(logging.ERROR,
+                               f'--FAILED--    we cant find {customer_id} customer id')
+    else:
+        self.repo.delete(Customer, customer_id)
+        self.repo.print_to_log(logging.INFO,
+                               f'--Sucsses--  customer id {customer_id} is removed')
+
+    # WORK GOOOD
+
+
+def remove_administrator(self, administrator_id):  # remove by administrator id
+    self.repo.print_to_log(logging.DEBUG, f'remove administrator is about to happen')
+    if not self.repo.get_by_condition(Administrator,
+                                      lambda query: query.filter(Administrator.id == administrator_id).all()):
+        print('Failed, we cant find this administrator id number')
+        self.repo.print_to_log(logging.ERROR,
+                               f'--FAILED--    we cant find {administrator_id} administrator id')
+    else:
+        self.repo.delete(Administrator, administrator_id)
+        self.repo.print_to_log(logging.INFO,
+                               f'--Sucsses--  administrator id {administrator_id} is removed')
+

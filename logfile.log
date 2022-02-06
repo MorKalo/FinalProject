@@ -234,3 +234,89 @@
 2022-02-06 02:41:07.905199 INFO --Sucsses--  airline company id 1 is removed
 2022-02-06 02:45:07.693809 DEBUG remove airline is about to happen
 2022-02-06 02:45:07.697810 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 03:23:11.914457 DEBUG remove airline is about to happen
+2022-02-06 03:23:11.921451 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 03:23:40.348862 DEBUG remove airline is about to happen
+2022-02-06 03:23:40.352861 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 03:24:25.527522 DEBUG remove airline is about to happen
+2022-02-06 03:24:25.533564 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 11:56:00.785727 DEBUG remove airline is about to happen
+2022-02-06 11:56:00.790732 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 11:59:05.126731 DEBUG remove airline is about to happen
+2022-02-06 11:59:05.131732 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 12:05:50.174926 DEBUG remove airline is about to happen
+2022-02-06 12:05:50.178925 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:28:51.955006 DEBUG remove airline is about to happen
+2022-02-06 14:28:51.958978 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:31:04.980418 DEBUG remove airline is about to happen
+2022-02-06 14:31:04.984418 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:32:48.056048 DEBUG remove airline is about to happen
+2022-02-06 14:32:48.063043 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:37:46.701108 DEBUG remove airline is about to happen
+2022-02-06 14:37:46.707107 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:38:46.986014 DEBUG remove airline is about to happen
+2022-02-06 14:38:46.990014 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:39:57.153302 DEBUG remove airline is about to happen
+2022-02-06 14:39:57.157296 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:42:01.346921 DEBUG remove airline is about to happen
+2022-02-06 14:42:01.350921 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:42:01.355921 INFO --Sucsses-- the user "ploli"  was created successfully, his details:   user id:7 email:li, user role:3  
+2022-02-06 14:42:01.355921 DEBUG add new admin is about to happen
+2022-02-06 14:42:01.360921 INFO --Sucsses--  User created: 
+<id=7 username=ploli password=lol email=li         user_role=3 >, Administrator created: 
+<id=3 first_name=dkdk last_name=dsfs user_id=7 >
+2022-02-06 14:42:17.529021 DEBUG remove airline is about to happen
+2022-02-06 14:42:17.533025 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:42:17.541027 INFO --Sucsses-- the user "ploli"  was created successfully, his details:   user id:7 email:li, user role:3  
+2022-02-06 14:42:17.541027 DEBUG add new admin is about to happen
+2022-02-06 14:42:17.544027 INFO --Sucsses--  User created: 
+<id=7 username=ploli password=lol email=li         user_role=3 >, Administrator created: 
+<id=3 first_name=dkdk last_name=dsfs user_id=7 >
+2022-02-06 14:44:00.874894 DEBUG remove airline is about to happen
+2022-02-06 14:44:00.878894 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:44:00.885895 INFO --Sucsses-- the user "ploli"  was created successfully, his details:   user id:7 email:li, user role:3  
+2022-02-06 14:44:00.885895 DEBUG add new admin is about to happen
+2022-02-06 14:44:12.433140 DEBUG remove airline is about to happen
+2022-02-06 14:44:12.436140 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:44:12.444142 INFO --Sucsses-- the user "ploli"  was created successfully, his details:   user id:7 email:li, user role:3  
+2022-02-06 14:44:12.444142 DEBUG add new admin is about to happen
+2022-02-06 14:44:26.144569 DEBUG remove airline is about to happen
+2022-02-06 14:44:26.150563 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:44:26.156568 INFO --Sucsses-- the user "ploli"  was created successfully, his details:   user id:7 email:li, user role:3  
+2022-02-06 14:44:26.156568 DEBUG add new admin is about to happen
+2022-02-06 14:44:33.728282 DEBUG remove airline is about to happen
+2022-02-06 14:44:33.731282 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:44:33.739281 INFO --Sucsses-- the user "ploli"  was created successfully, his details:   user id:7 email:li, user role:3  
+2022-02-06 14:44:33.739281 DEBUG add new admin is about to happen
+2022-02-06 14:44:33.743282 INFO --Sucsses--  User created: 
+<id=7 username=ploli password=lol email=li         user_role=3 >, Administrator created: 
+<id=3 first_name=shoki last_name=koki address=None         phone_number=0502111204 credit_card_no=1234569 user_id=7>
+2022-02-06 14:45:35.938251 DEBUG remove airline is about to happen
+2022-02-06 14:45:35.941251 INFO --Sucsses--  airline company id 1 is removed
+2022-02-06 14:45:35.948251 INFO --Sucsses-- the user "ploli"  was created successfully, his details:   user id:7 email:li, user role:3  
+2022-02-06 14:45:35.948251 DEBUG adding customer is about to happen
+2022-02-06 14:45:35.954251 INFO --Sucsses--  User created: 
+<id=7 username=ploli password=lol email=li         user_role=3 >, Administrator created: 
+<id=3 first_name=shoki last_name=koki address=None         phone_number=0502111204 credit_card_no=1234569 user_id=7>
+2022-02-06 14:53:22.540414 DEBUG remove flight is about to happen
+2022-02-06 14:53:22.546413 INFO --Sucsses--  flight  id 2 is removed
+2022-02-06 14:53:22.546413 DEBUG remove airline is about to happen
+2022-02-06 14:53:22.548413 INFO --Sucsses--  airline company id 2 is removed
+2022-02-06 14:56:16.994987 DEBUG remove flight is about to happen
+2022-02-06 14:56:16.999989 INFO --Sucsses--  flight  id 2 is removed
+2022-02-06 14:56:16.999989 DEBUG remove customer is about to happen
+2022-02-06 14:56:24.754662 DEBUG remove flight is about to happen
+2022-02-06 14:56:24.758697 INFO --Sucsses--  flight  id 2 is removed
+2022-02-06 14:56:24.758697 DEBUG remove customer is about to happen
+2022-02-06 14:56:35.729455 DEBUG remove flight is about to happen
+2022-02-06 14:56:35.733457 INFO --Sucsses--  flight  id 2 is removed
+2022-02-06 14:56:35.733457 DEBUG remove customer is about to happen
+2022-02-06 14:56:35.737456 INFO --Sucsses--  customer id 1 is removed
+2022-02-06 14:57:45.642506 DEBUG remove flight is about to happen
+2022-02-06 14:57:45.647505 INFO --Sucsses--  flight  id 2 is removed
+2022-02-06 14:57:45.647505 DEBUG remove customer is about to happen
+2022-02-06 14:57:45.650505 INFO --Sucsses--  customer id 1 is removed
+2022-02-06 14:59:50.091902 DEBUG remove flight is about to happen
+2022-02-06 14:59:50.096903 INFO --Sucsses--  flight  id 2 is removed
+2022-02-06 14:59:50.096903 DEBUG remove admin is about to happen
+2022-02-06 14:59:50.099901 INFO --Sucsses--  admin id 1 is removed

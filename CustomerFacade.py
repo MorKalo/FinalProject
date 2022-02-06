@@ -24,7 +24,7 @@ class CustomerFacade(BaseFacade):
     def update_customer(self,customer_id,update_data):#input from user only the data that we want to update.
         if customer_id!=self.logintoken.id:
             raise Usernotauthorized #need to check the token
-        customer_id=self.logintoken.id
+        #customer_id=self.logintoken.id
         self.repo.print_to_log(logging.DEBUG, f'update customer is about to happen')
         original_customer = self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.id == customer_id).all())
         if not original_customer:

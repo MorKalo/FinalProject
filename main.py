@@ -35,3 +35,12 @@ airfac=AirLineFacade(LoginToken(id=1, name='test', role=1))
  #            landing_Time=datetime(2022, 3, 30, 13, 0, 0), remaining_Tickets=12)
 #airfac.add_flight(fli2)
 airfac.remove_flight(1, 2)
+
+adm=AdministratorFacade(LoginToken(id=3, name='peleg', role=3))
+#usr=User(username='ploli', password='lol', email='li', user_role=3)
+#shoki=Customer(first_name='shoki', last_name='koki',  phone_number='0502111204',
+#                                   credit_card_no='1234569')
+#adm.create_customer(usr, shoki)
+#adm.remove_airline(2)
+#adm.remove_customer(1)
+adm.remove_administrator(1)

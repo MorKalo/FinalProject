@@ -130,7 +130,7 @@ class AirLineFacade(BaseFacade):
 
 
     def remove_flight(self, airline_id, flight_id): #remove by flight id
-        self.repo.print_to_log(logging.DEBUG, f'remove airline is about to happen')
+        self.repo.print_to_log(logging.DEBUG, f'remove flight is about to happen')
         if not self.repo.get_by_condition(Flight,
                                               lambda query: query.filter(Flight.id == flight_id).all()):
             print(f'Failed, we cant find  flight number {flight_id}')
@@ -142,4 +142,4 @@ class AirLineFacade(BaseFacade):
                 return
         self.repo.delete(Flight, flight_id)
         self.repo.print_to_log(logging.INFO,
-                                   f'--Sucsses--  airline company id {airline_id} is removed')
+                                   f'--Sucsses--  flight  id {flight_id} is removed')
