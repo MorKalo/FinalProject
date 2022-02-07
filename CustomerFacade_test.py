@@ -1,14 +1,11 @@
 import pytest
-from CustomerFacade import CustomerFacade
 from Init_db import *
 import time
 from DbRepo import DbRepo
-from LoginToken import LoginToken
 from UsernotauthorizedException import UsernotauthorizedException
 from TicketNotFoundException import TicketNotFoundException
 from FlightNotFoundException import FlightNotFoundException
 from NoMoreTicketsForFlightsException import NoMoreTicketsForFlightsException
-from Flight import Flight
 
 
 repo=DbRepo(local_session)
