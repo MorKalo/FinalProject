@@ -56,10 +56,10 @@ class Init_db():
         # add flight's
         self.repo.add(Flight(airline_Company_Id=1, origin_Country_id=2, destination_Country_id=1,
                          departure_Time=datetime(2022, 3, 30, 15, 0, 0),
-                         landing_Time=datetime(2022, 3, 30, 20, 0, 0), remaining_Tickets=12))
+                         landing_Time=datetime(2022, 3, 30, 20, 0, 0), remaining_Tickets=23))
         self.repo.add(Flight(airline_Company_Id=2, origin_Country_id=1, destination_Country_id=2,
                          departure_Time=datetime(2022, 2, 10, 11, 0, 0),
-                         landing_Time=datetime(2022, 2, 10, 12, 0, 0), remaining_Tickets=43))
+                         landing_Time=datetime(2022, 2, 10, 12, 0, 0), remaining_Tickets=0))
         # add tickets's
         self.repo.add(Ticket(flight_id=1, customer_id=1))
         self.repo.add(Ticket(flight_id=2, customer_id=2))

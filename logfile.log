@@ -362,3 +362,98 @@
 2022-02-06 16:21:28.282632 DEBUG add new flight for airline company turkish id 2 is about to happen
 2022-02-06 16:21:28.285633 ERROR --FAILED--  update by  flight id  2 failed because  this destination country id  1and origin country id cant be the same
 2022-02-06 23:09:51.662155 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 01:21:02.906699 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 01:23:21.037112 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 01:23:40.549843 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 01:38:03.785293 INFO --SUCCESS--  remove ticket by shlomi id 1 for customer id  Ticket.customer_id to flight 1 is finish Successfully
+2022-02-07 01:40:09.275137 DEBUG removing ticket by shlomi id 1 is about to happen.
+2022-02-07 01:40:42.769122 DEBUG removing ticket by shlomi id 1 is about to happen.
+2022-02-07 01:48:05.284336 DEBUG removing ticket by shlomi id 1 is about to happen.
+2022-02-07 01:48:28.588218 DEBUG removing ticket by shlomi id 1 is about to happen.
+2022-02-07 01:56:23.055506 DEBUG removing ticket by shlomi id 1 is about to happen.
+2022-02-07 01:56:23.063502 INFO --SUCCESS--  remove ticket by shlomi id 1 for customer id  Ticket.customer_id to flight 1 is finish Successfully
+2022-02-07 01:56:23.064501 DEBUG there is more 13 ticket for flight 1
+2022-02-07 01:57:40.123526 DEBUG removing ticket by shlomi id 1 is about to happen.
+2022-02-07 01:57:40.127532 INFO --SUCCESS--  remove ticket by shlomi id 1 for customer id  Ticket.customer_id to flight 1 is finish Successfully
+2022-02-07 01:57:40.128532 DEBUG there is more 13 ticket for flight 1
+2022-02-07 01:57:52.924417 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:01:13.085715 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:01:56.835640 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:02:36.443825 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:05:07.569131 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:05:31.761079 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:05:34.985220 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:09:50.527956 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:09:53.696432 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:10:18.158258 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:10:21.351134 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:11:02.019683 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:11:05.243481 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:11:37.835831 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:11:41.036331 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:14:01.809455 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:14:05.013062 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:16:57.203366 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:17:00.393455 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:18:03.113060 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:18:06.259616 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:19:02.611938 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:19:05.768476 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:19:51.105351 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:19:54.287984 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:20:45.223332 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:20:48.402647 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:21:28.947465 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:21:32.180666 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:22:17.865470 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:22:21.047541 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:36:21.039098 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:36:24.224688 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:41:40.669700 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:41:43.851453 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:46:38.600146 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:46:41.787882 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:46:44.968722 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:48:11.905119 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:48:15.071659 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:48:18.307214 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:48:59.040328 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:49:02.257170 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:50:33.781320 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 02:50:36.988846 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 02:50:40.173991 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 03:02:09.849665 DEBUG adding ticket by shlomi, id 1, role2 is about to happen
+2022-02-07 03:02:09.852665 INFO --FAILED--  adding ticket by shlomi, id 1, role2  for flight NO. 1, because no more tickets are available for this flight
+2022-02-07 03:02:09.856667 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 03:02:45.034989 DEBUG adding ticket by shlomi, id 1, role2 is about to happen
+2022-02-07 03:02:45.039987 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 03:02:53.954972 DEBUG adding ticket by shlomi, id 1, role2 is about to happen
+2022-02-07 03:02:53.957969 INFO --FAILED--  adding ticket by shlomi, id 1, role2  for flight NO. 2, because no more tickets are available for this flight
+2022-02-07 03:02:53.962968 INFO --SUCCESS-- shlomi 1 adding ticket for customer id  1 to flight 2 is finish Successfully
+2022-02-07 03:02:53.962968 DEBUG there is more -1 ticket for flight 2
+2022-02-07 03:05:55.399532 DEBUG adding ticket by shlomi, id 1, role2 is about to happen
+2022-02-07 03:05:55.401533 INFO --FAILED--  adding ticket by shlomi, id 1, role2  for flight NO. 2, because no more tickets are available for this flight
+2022-02-07 03:07:10.798274 DEBUG adding ticket by shlomi, id 1, role2 is about to happen
+2022-02-07 03:07:10.801261 INFO --FAILED--  adding ticket by shlomi, id 1, role2  for flight NO. 2, because no more tickets are available for this flight
+2022-02-07 03:07:36.923530 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:07:40.102073 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 03:07:43.298106 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 03:08:38.579445 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:08:41.771588 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 03:08:44.977345 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 03:11:50.534114 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:11:53.702185 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 03:11:56.905620 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 03:12:29.671637 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:12:32.834558 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 03:12:36.025083 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 03:13:24.796993 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:13:27.975563 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 03:13:31.154777 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 03:14:02.122824 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:14:05.320912 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 03:14:08.548530 ERROR --FAILED-- customer id 1 already heve ticket for this flight number 1.
+2022-02-07 03:15:07.203901 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:15:10.384184 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 03:17:08.327501 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:17:11.527173 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight

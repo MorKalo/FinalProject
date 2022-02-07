@@ -1,4 +1,4 @@
-class FlightNotFound(Exception):
+class FlightNotFoundException(Exception):
     def __init__(self,  message='We didnt find flight with this ID'):
         #self.flight=flight
         self.message=message

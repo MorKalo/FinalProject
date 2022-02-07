@@ -7,7 +7,7 @@ from Administrator import Administrator
 from Flight import Flight
 from Customer import Customer
 from Ticket import Ticket
-from FlightNotFound import FlightNotFound
+from FlightNotFoundException import FlightNotFoundException
 from NoMoreTicketsForFlightsException import NoMoreTicketsForFlightsException
 from TicketNotFoundException import TicketNotFoundException
 from LoginToken import LoginToken
@@ -67,16 +67,13 @@ class CustomerFacade(BaseFacade):
             self.repo.print_to_log(logging.ERROR, f'--FAILED--  adding ticket by {self.logintoken.name}, id '
                                                   f'{self.logintoken.id}, role{self.logintoken.role}  for flight'
                                                   f' NO. {ticket.flight_id}, because we cant find this flight')
-            raise FlightNotFound
-        if flight[0].remaining_Tickets < 1:
-            try:
-                self.repo.print_to_log(logging.INFO, f'--FAILED--  adding ticket by {self.logintoken.name}, id '
-                                                  f'{self.logintoken.id}, role{self.logintoken.role}  for flight'
-                                                  f' NO. {ticket.flight_id}, because no more tickets are available'
-                                                  f' for this flight')
-                raise NoMoreTicketsForFlightsException(ticket.flight_id)
-            except NoMoreTicketsForFlightsException as e:
-                print (e)
+            raise FlightNotFoundException
+        if flight[0].remaining_Tickets <= 0:
+            self.repo.print_to_log(logging.INFO, f'--FAILED--  adding ticket by {self.logintoken.name}, id '
+                                                 f'{self.logintoken.id}, role{self.logintoken.role}  for flight'
+                                                 f' NO. {ticket.flight_id}, because no more tickets are available'
+                                                 f' for this flight')
+            raise NoMoreTicketsForFlightsException(ticket.flight_id)
         customer = self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.id == ticket.customer_id).all())
         if self.logintoken.role!=3:
             if customer[0].id!= self.logintoken.id:
@@ -97,29 +94,29 @@ class CustomerFacade(BaseFacade):
             self.repo.add(ticket)
             self.repo.print_to_log(logging.INFO, f'--SUCCESS-- {self.logintoken.name} {self.logintoken.id} adding ticket for customer id  {ticket.customer_id} to flight {ticket.flight_id} is finish Successfully')
             self.repo.print_to_log(logging.DEBUG, f'there is more {flight[0].remaining_Tickets} ticket for flight {ticket.flight_id}')
-
+            return True
 
     def remove_ticket(self, ticket_id): #FUNC BY ID, fun can action only by the customer id thats own and admin
-        tickedetails = self.repo.get_by_condition(Ticket, lambda query: query.filter(Ticket.id == ticket_id).all())
-        if self.logintoken.role!=3:
-            if tickedetails[0].customer_id!= self.logintoken.id:
-                raise UsernotauthorizedException
-                return
-        self.repo.print_to_log(logging.DEBUG, f'removing ticket by {self.logintoken.name} id {self.logintoken.id} is about to happen.')
         ticket_exists = self.repo.get_by_condition(Ticket, lambda query: query.filter(Ticket.id == ticket_id).all())
         if not ticket_exists:
             self.repo.print_to_log(logging.ERROR,
                                    f'--FAILED--   {self.logintoken.name}, id {self.logintoken.id} trying to remove ticket id {ticket_id}'
                                    f'  but we cant find this ticket')
             raise TicketNotFoundException
+        elif ticket_exists[0].customer_id != self.logintoken.id:
+            if self.logintoken.role != 3:
+                raise UsernotauthorizedException
         else:
+            self.repo.print_to_log(logging.DEBUG,
+                             f'removing ticket by {self.logintoken.name} id {self.logintoken.id} is about to happen.')
             flight = self.repo.get_by_condition(Flight,
-                                                lambda query: query.filter(Flight.id == tickedetails[0].flight_id).all())
+                                            lambda query: query.filter(Flight.id == ticket_exists[0].flight_id).all())
             ticketforflight=flight[0].remaining_Tickets
             self.repo.update_by_id(Flight,ticket_id,{Flight.remaining_Tickets:ticketforflight+1})
             self.repo.delete(Ticket, ticket_id)
-            self.repo.print_to_log(logging.INFO, f'--SUCCESS--  remove ticket by {self.logintoken.name} id {self.logintoken.id}'
-                                   f' for customer id  {Ticket.customer_id} to flight {ticket_id} is finish Successfully')
+            self.repo.print_to_log(logging.INFO, f'--SUCCESS--  remove ticket by {self.logintoken.name} '
+                                            f'id {self.logintoken.id} for customer id  {Ticket.customer_id}'
+                                                 f' to flight {ticket_id} is finish Successfully')
             self.repo.print_to_log(logging.DEBUG, f'there is more {flight[0].remaining_Tickets} ticket for flight {ticket_id}')
             return True
 
