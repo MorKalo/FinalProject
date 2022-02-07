@@ -457,3 +457,7 @@
 2022-02-07 03:15:10.384184 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
 2022-02-07 03:17:08.327501 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
 2022-02-07 03:17:11.527173 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 03:19:28.555875 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:19:31.724526 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 03:20:46.898275 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 03:20:50.061473 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight

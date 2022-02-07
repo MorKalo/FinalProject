@@ -35,10 +35,7 @@ def dao_init():
     print('cleanup, after')
     time.sleep(3)
 
-def test_add_ticket(dao_connection_test):
-    newticket=Ticket(flight_id=2, customer_id=1)
-    actual=dao_connection_test.remove_ticket(newticket)
-    assert actual==True
+
 
 
 
@@ -84,6 +81,11 @@ def test_add_ticket_UsernotauthorizedException(dao_connection_test):
         actual = dao_connection_test.add_ticket(ticket)
         assert actual == False
 
+
+def test_add_ticket(dao_connection_test):
+    newticket=Ticket(flight_id=3, customer_id=1)
+    actual=dao_connection_test.add_ticket(newticket)
+    assert actual==True
 
 #ticket_id=1
     #dao_connection_test.remove_ticket(ticket_id)
