@@ -3,6 +3,7 @@ from Init_db import *
 import time
 from DbRepo import DbRepo
 import datetime
+from Flight import *
 from AirlineCompany import AirlineCompany
 from AirLineFacade import AirLineFacade
 from UsernotauthorizedException import UsernotauthorizedException
@@ -85,7 +86,7 @@ def test_add_flight_landing_before_departure(dao_connection_test):#need to finis
     assert actual == False
 
 
-def test_add_flight_reaming_tickets_positive(dao_connection_test):
+def test_update_flight_reaming_tickets_positive(dao_connection_test):
     flight=Flight(airline_Company_Id=2, origin_Country_id=2, destination_Country_id=1, remaining_Tickets=0)
     actual = dao_connection_test.add_flight(flight)
     assert actual == False

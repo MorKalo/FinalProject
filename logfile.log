@@ -676,3 +676,34 @@
 2022-02-08 01:27:57.660857 ERROR --FAILED--  we cant find flight number  None 
 2022-02-08 01:28:03.994780 ERROR --FAILED--  we cant find flight number  None 
 2022-02-08 01:28:07.229971 ERROR --FAILED--    we cant find  flight number 4
+2022-02-08 11:22:14.238913 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-08 11:22:20.630631 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-08 11:22:23.809912 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-08 11:22:27.003784 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-08 11:22:43.146573 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:22:46.335748 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:22:49.564324 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:22:55.947361 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:22:59.150749 ERROR --FAILED--    we cant find  flight number 4
+2022-02-08 11:23:21.911235 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-08 11:23:28.305236 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-08 11:23:31.495483 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-08 11:23:34.702405 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-08 11:23:37.898730 ERROR --FAILED--  update by  flight id  2 failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-28 16:00:00
+2022-02-08 11:23:50.775827 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:23:53.956773 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:23:57.163012 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:24:00.345002 ERROR --FAILED--  update by  flight id  2 failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-28 16:00:00
+2022-02-08 11:24:03.535350 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:24:06.750919 ERROR --FAILED--    we cant find  flight number 4
+2022-02-08 11:24:54.618913 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-08 11:25:01.034499 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-08 11:25:04.238728 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-08 11:25:07.405348 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-08 11:25:10.573995 ERROR --FAILED--  update by  flight id  2 failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-28 16:00:00
+2022-02-08 11:25:20.159928 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:25:23.323140 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:25:26.493983 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:25:29.694534 ERROR --FAILED--  update by  flight id  2 failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-28 16:00:00
+2022-02-08 11:25:32.879184 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 11:25:36.078776 ERROR --FAILED--    we cant find  flight number 4
