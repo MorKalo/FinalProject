@@ -461,3 +461,218 @@
 2022-02-07 03:19:31.724526 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
 2022-02-07 03:20:46.898275 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
 2022-02-07 03:20:50.061473 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 14:27:25.963855 ERROR --FAILED--   Shlomi, id 1 trying to remove ticket id 5  but we cant find this ticket
+2022-02-07 14:27:29.220152 ERROR --FAILED--  adding ticket by Shlomi, id 1, role2  for flight NO. 4, because we cant find this flight
+2022-02-07 14:49:23.116211 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 14:49:49.182197 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 14:52:31.670487 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 14:56:13.051083 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 14:57:24.224098 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 14:58:15.738466 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 14:58:38.949394 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 14:58:58.690165 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 15:31:36.595406 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 15:46:54.126872 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 15:48:19.095377 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 15:48:25.567806 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 15:49:33.264115 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 15:49:39.707621 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 15:50:29.344939 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 15:50:35.753274 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 15:51:39.691323 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 15:51:46.078847 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 15:51:49.262178 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 15:53:57.748697 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 15:54:04.141185 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 15:54:07.327047 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 15:54:10.524171 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 15:57:50.466880 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 15:57:56.801075 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 15:57:59.969467 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 15:58:03.170431 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 22:23:17.250351 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 22:23:23.677677 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 22:23:26.846066 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 22:23:30.039161 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 22:23:33.218959 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-30 20:00:00
+2022-02-07 22:24:11.957461 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 22:24:18.335112 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 22:24:21.495922 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 22:24:24.714965 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 22:24:27.959516 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-30 16:00:00
+2022-02-07 22:25:22.284265 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 22:25:28.705389 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 22:25:31.912503 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 22:25:35.097825 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 22:29:01.682673 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 22:29:08.129076 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 22:29:11.297838 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 22:29:14.534201 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 22:29:35.308452 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 22:29:41.721466 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 22:29:44.889695 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 22:29:48.107652 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 22:30:41.110316 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 22:30:47.505007 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 22:30:50.705690 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 22:30:53.905824 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 22:41:23.932912 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 22:41:30.341974 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 22:41:33.520677 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 22:41:36.726066 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 22:44:37.441733 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 22:44:43.917959 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 22:44:47.086654 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 22:44:50.237222 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 22:47:19.378007 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-07 22:47:19.383031 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-30 16:00:00
+2022-02-07 22:48:21.481870 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-07 22:48:21.485870 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-30 16:00:00
+2022-02-07 22:49:13.993023 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 22:49:20.386835 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 22:49:23.572960 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 22:49:26.803832 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:13:34.260791 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:13:47.020417 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:13:50.244286 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:13:53.470225 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:13:59.918465 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:14:53.407796 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:14:59.884915 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:15:03.120791 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:15:06.317032 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:15:22.382775 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:15:25.598516 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:15:28.798838 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:15:35.171043 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:22:03.575243 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:22:09.957915 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:22:13.130764 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:22:16.293297 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:22:32.267297 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:22:35.473154 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:22:38.708989 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:22:45.123570 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:26:12.548939 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:26:18.921744 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:26:22.116868 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:26:25.279890 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:26:41.279177 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:26:44.448725 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:26:47.624509 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:26:54.014082 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:28:28.154057 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:28:34.509681 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:28:37.714016 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:28:40.879925 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:28:56.973131 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:29:00.144422 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:29:03.319241 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:29:09.754780 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:42:36.348189 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:42:42.760985 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:42:45.968386 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:42:49.136780 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:43:05.141403 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:43:08.320507 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:43:11.499519 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:43:17.888347 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:45:59.580832 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-07 23:45:59.582832 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-28 16:00:00
+2022-02-07 23:46:44.689795 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-07 23:46:44.692797 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-28 16:00:00
+2022-02-07 23:46:57.232241 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:47:03.591439 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:47:06.786507 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:47:09.949562 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:47:25.950725 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:47:29.143098 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:47:32.339515 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:47:38.729015 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:48:12.456426 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:48:18.841493 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:48:22.042473 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:48:25.208894 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:48:41.257473 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:48:44.450549 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:48:47.703363 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:48:54.096519 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:51:31.751007 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:51:38.179904 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:51:41.361070 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:51:44.575694 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:52:00.677691 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:52:03.859420 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:52:07.025653 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:52:13.463829 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:53:48.122891 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:53:54.494014 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:53:57.699897 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:54:00.900302 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:54:16.943757 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:54:20.186989 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:54:23.372883 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:54:29.815421 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:55:41.994445 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:55:48.344767 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:55:51.557763 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:55:54.765203 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:56:10.792883 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:56:13.995429 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:56:17.166285 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:56:23.510035 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:56:57.130663 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-07 23:57:03.497963 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-07 23:57:06.687926 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-07 23:57:09.874040 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-07 23:57:25.901549 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:57:29.093434 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:57:32.295253 ERROR --FAILED--  we cant find flight number  None 
+2022-02-07 23:57:38.657094 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:00:52.960132 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-08 00:00:59.325251 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-08 00:01:02.493056 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-08 00:01:05.699029 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-08 00:01:21.720385 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:01:24.905267 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:01:28.083715 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:01:34.499308 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:06:52.627808 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-08 00:06:59.007129 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-08 00:07:02.229766 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-08 00:07:05.389511 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-08 00:07:21.351586 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:07:24.544382 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:07:27.748812 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:07:34.140566 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:07:37.297213 ERROR --FAILED--    we cant find  flight number 4
+2022-02-08 00:09:25.395704 ERROR --FAILED--    we cant find  flight number 4
+2022-02-08 00:44:17.668209 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-08 00:44:24.107277 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-08 00:44:27.288025 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-08 00:44:30.545755 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-08 00:45:02.891845 ERROR --FAILED--    we cant find  flight number 4
+2022-02-08 00:46:40.638739 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:46:43.866939 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:46:47.112487 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 00:46:53.511697 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 01:20:47.570813 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-08 01:20:53.900477 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-08 01:20:57.131374 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-08 01:21:00.341690 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-08 01:21:16.367411 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 01:21:19.541893 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 01:21:22.753829 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 01:21:29.113729 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 01:21:32.317656 ERROR --FAILED--    we cant find  flight number 4
+2022-02-08 01:23:11.060400 DEBUG add new flight for airline company turkish id 2 is about to happen
+2022-02-08 01:23:11.064400 ERROR --FAILED--  update by  flight id  None failed because  flight cant landing before departure.  departure time: 2022-03-30 21:00:00 ,landing time: 2022-03-28 16:00:00
+2022-02-08 01:27:22.451773 ERROR --FAILED--  update by  airline id  2 failed because  airline company  name  Deltais alredy exists.
+2022-02-08 01:27:28.784565 ERROR --FAILED--  update by  flight id  None failed because  the origin country 3 did not exist in our country DB
+2022-02-08 01:27:31.974897 ERROR --FAILED--  update by  flight id  None failed because  the destination country 4 did not exist in our country DB
+2022-02-08 01:27:35.162317 ERROR --FAILED--  update by  flight id  None failed because  this destination country id  2and origin country id cant be the same
+2022-02-08 01:27:51.237973 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 01:27:54.464865 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 01:27:57.660857 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 01:28:03.994780 ERROR --FAILED--  we cant find flight number  None 
+2022-02-08 01:28:07.229971 ERROR --FAILED--    we cant find  flight number 4

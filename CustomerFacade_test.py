@@ -33,10 +33,6 @@ def dao_init():
     time.sleep(3)
 
 
-
-
-
-
 def test_get_my_tickets(dao_connection_test):
     assert dao_connection_test.get_my_tickets() != None
 

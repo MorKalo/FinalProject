@@ -41,16 +41,16 @@ class AnonymusFacade(BaseFacade):
                 self.repo.print_to_log(logging.INFO,
                                    f'--Sucsses-- the password is match for user "{username}"')
                 if user[0].user_role == 1:
-                    self.repo.print_to_log(logging.INFO,
-                                           f'--Sucsses-- the user "{username}" transferred to Airline Facade  ')
                     airline_=self.repo.get_by_condition(AirlineCompany, lambda query: query.filter(AirlineCompany.user_id == user[0].id).all())
                     login_token = LoginToken(id=airline_[0].id, name=airline_[0].name, role=user[0].user_role)
+                    self.repo.print_to_log(logging.INFO,
+                                           f'--Sucsses-- the user "{username}" transferred to Airline Facade  ')
                     return (AirLineFacade(login_token))
                 elif user[0].user_role == 2:
-                    self.repo.print_to_log(logging.INFO,
-                                           f'--Sucsses-- the user "{username}" transferred to Customer Facade  ')
                     customer_=self.repo.get_by_condition(Customer, lambda query: query.filter(Customer.user_id == user[0].id).all())
                     login_token = LoginToken(id=customer_[0].id, name=customer_[0].first_name, role=user[0].user_role)
+                    self.repo.print_to_log(logging.INFO,
+                                           f'--Sucsses-- the user "{username}" transferred to Customer Facade  ')
                     return (CustomerFacade(login_token))
                 elif user[0].user_role == 3:
                     self.repo.print_to_log(logging.INFO,

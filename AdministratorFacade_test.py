@@ -2,10 +2,6 @@ import pytest
 from Init_db import *
 import time
 from DbRepo import DbRepo
-from LoginToken import LoginToken
-from AirLineFacade import AirLineFacade
-from CustomerFacade import CustomerFacade
-from AdministratorFacade import AdministratorFacade
 from UsernotauthorizedException import UsernotauthorizedException
 from TicketNotFoundException import TicketNotFoundException
 from FlightNotFoundException import FlightNotFoundException
@@ -16,7 +12,9 @@ repo=DbRepo(local_session)
 
 @pytest.fixture(scope='session', autouse=True)
 def dao_connection_test():
-    return AnonymusFacade()
+    anon_facade=AnonymusFacade()
+    return anon_facade.login('Nanos', '324')
+
 
 
 @pytest.fixture(scope='function', autouse=True)
@@ -34,10 +32,3 @@ def dao_init():
     print('cleanup, after')
     time.sleep(3)
 
-@pytest.mark.parametrize('username, password, expected', [('turkish', '97', AirLineFacade())
-                                                        #  ,('pninosh', '786', CustomerFacade),
-                                                         # ('Moti5k', '232', AdministratorFacade),
-                                                          ])
-def test_login(dao_connection_test, username, password, expected):
-    actual=dao_connection_test.login(username, password)
-    assert isinstance(actual, expected)

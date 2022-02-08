@@ -8,14 +8,13 @@ from AirlineCompany import AirlineCompany
 from Customer import Customer
 from User_Roles import User_Roles
 from Ticket import Ticket
-from User import  User
+from User import User
 from Administrator import Administrator
 from AdministratorFacade import AdministratorFacade
 from AirLineFacade import AirLineFacade
 from CustomerFacade import CustomerFacade
 from AnonymusFacade import AnonymusFacade
 from datetime import *
-
 from Db_config import local_session, create_all_entities
 
 class Init_db():
