@@ -5,11 +5,14 @@ from DbRepo import DbRepo
 from Administrator import Administrator
 from Customer import Customer
 from AirlineCompany import AirlineCompany
+from CreateUserAndObjectFailedException import CreateUserAndObjectFailedException
 from User import User
 from Country import Country
 from LoginToken import LoginToken
 from Flight import Flight
 from UsernotauthorizedException import UsernotauthorizedException
+from NameNeedToBeDifrentException import NameNeedToBeDifrentException
+from DataExistException import DataExistException
 
 
 
@@ -27,97 +30,90 @@ class AdministratorFacade(BaseFacade):
 
     def create_airline(self, user, airline):#user and airline are object
         if not self.logintoken.role == 3:
+            self.repo.print_to_log(logging.ERROR,
+                                   f'--FAILED--  this user "{self.logintoken.name, self.logintoken.id}"cant create airline.')
             raise UsernotauthorizedException
-            return
         else:
             if super().create_new_user(user):
-                self.add_airline(user, airline)
+                #self.add_airline(user, airline)
+                self.repo.print_to_log(logging.DEBUG, f'add new airline is about to happen')
+                if self.repo.get_by_condition(AirlineCompany, lambda query: query.filter(
+                        AirlineCompany.name == airline.name).all()):
+                    self.repo.print_to_log(logging.ERROR,
+                                           f'--FAILED--  {airline.name} we already have Airline company with this name')
+                    raise NameNeedToBeDifrentException
+                #       print('Failed.  we already have Airline company with this name.')
+                #      return
+                if not self.repo.get_by_condition(Country,
+                                                  lambda query: query.filter(Country.id == airline.country_id).all()):
+                    print(f' Failed.  the country {airline.country_id} does not exist.')
+                    return
+                airline.user_id = user.id
+                self.repo.add(airline)
                 self.repo.print_to_log(logging.INFO,
-                               f'--Sucsses--  User created: {user}, Airline created: {airline}')
+                                       f'--Sucsses--  User created: {user}, Airline created: {airline}')
+                return True
             else:
-                print (f'--Failed-- we cant create this user and airline company')
                 self.repo.print_to_log(logging.ERROR,
                                        f'--FAILED--   we cant create this user "{user}" and airline company "{airline}" .')
-
-
-    def add_airline(self, user, airline):#use this func from create airline only. user and airline are object.
-        # token checked at create airline func
-        self.repo.print_to_log(logging.DEBUG, f'add new airline is about to happen')
-        if  self.repo.get_by_condition(AirlineCompany, lambda query: query.filter(
-                    AirlineCompany.name == airline.name).all()):
-            print('Failed.  we already have Airline company with this name.')
-            self.repo.print_to_log(logging.ERROR,
-                        f'--FAILED--  {airline.name} we already have Airline company with this name')
-            return
-        if not self.repo.get_by_condition(Country,
-                                          lambda query: query.filter(Country.id == airline.country_id).all()):
-            print(f' Failed.  the country {airline.country_id} does not exist.')
-            return
-        airline.user_id=user.id
-        self.repo.add(airline)
-        return
-
-
-    def create_admin(self, user, administrator):#user and admin are object
-        if not self.logintoken.role == 3:
-            raise UsernotauthorizedException
-            return
-        else:
-            if super().create_new_user(user):
-                self.add_administrator(user, administrator)
-                self.repo.print_to_log(logging.INFO,
-                               f'--Sucsses--  User created: {user}, Administrator created: {administrator}')
-            else:
-                print (f'--Failed-- we cant create this user and Administrator')
-                self.repo.print_to_log(logging.ERROR,
-                                       f'--FAILED--   we cant create this user "{user}" and Administrator{administrator} .')
-
-
-    def add_administrator(self, user, administrator):#use this func from create airline only. user and admin are object.
-        # token checked at create airline func
-        self.repo.print_to_log(logging.DEBUG, f'add new admin is about to happen')
-        administrator.user_id=user.id
-        self.repo.add(administrator)
-        return
+                raise CreateUserAndObjectFailedException
 
 
     def create_customer(self, user, customer):#user and customer are object
         if not self.logintoken.role == 3:
             raise UsernotauthorizedException
-            return
         else:
             if super().create_new_user(user):
-                self.add_customer(user, customer)
+                #self.add_customer(user, customer)
+                self.repo.print_to_log(logging.DEBUG, f'adding customer is about to happen')
+                # trying to find this customer in Customer, and to check if there isnt another customer with does deatils:
+                # Phone number
+                if self.repo.get_by_condition(Customer,
+                                              lambda query: query.filter(
+                                                  Customer.phone_number == customer.phone_number).all()):
+                    print('Failed, a customer with this phone number is already exists.')
+                    self.repo.print_to_log(logging.ERROR,
+                                           f'--FAILED--  {customer.id} a customer with the same Phone number {customer.phone_number}'
+                                           f'is alredy exists.')
+                    raise DataExistException
+                    #return False
+                # Credit-Card number
+                if self.repo.get_by_condition(Customer, lambda query: query.filter(
+                        Customer.credit_card_no == customer.credit_card_no).all()):
+                    print('Failed, a customer with this credit card number is already exists.')
+                    self.repo.print_to_log(logging.ERROR,
+                                           f'--FAILED--  {customer.id} a customer with the Credit card  number {customer.credit_card_no}'
+                                           f'is alredy exists.')
+                    raise DataExistException
+                customer.user_id = user.id
+                self.repo.add(customer)
                 self.repo.print_to_log(logging.INFO,
                                        f'--Sucsses--  User created: {user}, Administrator created: {customer}')
+                return True
             else:
-                print(f'--Failed-- we cant create this user and Administrator')
+                #print(f'--Failed-- we cant create this user and Administrator')
                 self.repo.print_to_log(logging.ERROR,
                                        f'--FAILED--   we cant create this user "{user}" and Administrator{customer} .')
+                raise CreateUserAndObjectFailedException
 
 
-    def add_customer(self, user, customer):
-        self.repo.print_to_log(logging.DEBUG, f'adding customer is about to happen')
-        # trying to find this customer in Customer, and to check if there isnt another customer with does deatils:
-        # Phone number
-        if self.repo.get_by_condition(Customer,
-                                      lambda query: query.filter(
-                                          Customer.phone_number == customer.phone_number).all()):
-            print('Failed, a customer with this phone number is already exists.')
-            self.repo.print_to_log(logging.ERROR,
-                                   f'--FAILED--  {customer.id} a customer with the same Phone number {customer.phone_number}'
-                                   f'is alredy exists.')
-            return
-        # Credit-Card number
-        if self.repo.get_by_condition(Customer, lambda query: query.filter(
-                                          Customer.credit_card_no == customer.credit_card_no).all()):
-            print('Failed, a customer with this credit card number is already exists.')
-            self.repo.print_to_log(logging.ERROR,
-                                   f'--FAILED--  {customer.id} a customer with the Credit card  number {customer.credit_card_no}'
-                                   f'is alredy exists.')
-            return
-        customer.user_id = user.id
-        self.repo.add(customer)
+    def create_admin(self, user, administrator):#user and admin are object
+        if not self.logintoken.role == 3:
+            raise UsernotauthorizedException
+        else:
+            if super().create_new_user(user):
+                #self.add_administrator(user, administrator)
+                self.repo.print_to_log(logging.DEBUG, f'add new admin is about to happen')
+                administrator.user_id = user.id
+                self.repo.add(administrator)
+                self.repo.print_to_log(logging.INFO,
+                               f'--Sucsses--  User created: {user}, Administrator created: {administrator}')
+                return True
+            else:
+                print (f'--Failed-- we cant create this user and Administrator')
+                self.repo.print_to_log(logging.ERROR,
+                                       f'--FAILED--   we cant create this user "{user}" and Administrator{administrator} .')
+                raise CreateUserAndObjectFailedException
 
 
     def remove_airline(self, airline_id):
@@ -127,12 +123,14 @@ class AdministratorFacade(BaseFacade):
             print(f'Failed, we cant find  this airline company id {airline_id}')
             self.repo.print_to_log(logging.ERROR,
                                    f'--FAILED--    we cant find  this airline company id {airline_id}')
+            return False
         elif self.logintoken.role != 3:
                 raise UsernotauthorizedException
                 return
         self.repo.delete(AirlineCompany, airline_id)
         self.repo.print_to_log(logging.INFO,
                                    f'--Sucsses--  airline company id {airline_id} is removed')
+        return True
 
     def remove_customer(self, customer_id):
         self.repo.print_to_log(logging.DEBUG, f'remove customer is about to happen')
@@ -141,13 +139,13 @@ class AdministratorFacade(BaseFacade):
             print(f'Failed, we cant find  this Customer  id {customer_id}')
             self.repo.print_to_log(logging.ERROR,
                                    f'--FAILED--    we cant find  this customer id {customer_id}')
+            return False
         elif self.logintoken.role != 3:
                 raise UsernotauthorizedException
-                return
         self.repo.delete(Customer, customer_id)
         self.repo.print_to_log(logging.INFO,
                                    f'--Sucsses--  customer id {customer_id} is removed')
-
+        return True
 
     def remove_administrator(self, admin_id):
         self.repo.print_to_log(logging.DEBUG, f'remove admin is about to happen')
@@ -156,9 +154,10 @@ class AdministratorFacade(BaseFacade):
             print(f'Failed, we cant find  this admin  id {admin_id}')
             self.repo.print_to_log(logging.ERROR,
                                    f'--FAILED--    we cant find  this admin id {admin_id}')
+            return False
         elif self.logintoken.role != 3:
                 raise UsernotauthorizedException
-                return
         self.repo.delete(Administrator, admin_id)
         self.repo.print_to_log(logging.INFO,
                                    f'--Sucsses--  admin id {admin_id} is removed')
+        return True

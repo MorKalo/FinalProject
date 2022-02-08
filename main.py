@@ -43,6 +43,12 @@ fli=Flight(id=2, origin_Country_id=1, destination_Country_id=1, airline_Company_
 #airfac.add_flight(fli)
 
 adm=AdministratorFacade(LoginToken(id=3, name='peleg', role=3))
+#airline1 = AirlineCompany(name='al', country_id=1)
+#customer1=Customer(first_name='alijd', last_name='ddd', phone_number='0502111205',
+#                                   credit_card_no='123456')
+#user1 = User(username='arkia', password='arki', email='arkia@gmail.com', user_role=1)
+#adm.create_customer(user1, customer1)
+adm.remove_customer(2)
 #usr=User(username='ploli', password='lol', email='li', user_role=3)
 #shoki=Customer(first_name='shoki', last_name='koki',  phone_number='0502111204',
 #                                   credit_card_no='1234569')
@@ -52,7 +58,7 @@ adm=AdministratorFacade(LoginToken(id=3, name='peleg', role=3))
 #adm.remove_administrator(1)
 #cus=CustomerFacade(LoginToken(id=1, name='shlomi', role=2))
 #cus.add_ticket(Ticket(flight_id=2, customer_id=1))
-airfac=AirLineFacade(LoginToken(id=2, name='turkish', role=1))
-newflight=Flight(airline_Company_Id=2, origin_Country_id=2, destination_Country_id=1,  departure_Time=datetime(2022, 3, 30, 21, 0, 0),
-                             landing_Time=datetime(2022, 3, 28, 16, 0, 0))
-airfac.add_flight(newflight)
+#airfac=AirLineFacade(LoginToken(id=2, name='turkish', role=1))
+#newflight=Flight(airline_Company_Id=2, origin_Country_id=2, destination_Country_id=1,  departure_Time=datetime(2022, 3, 30, 21, 0, 0),
+#                             landing_Time=datetime(2022, 3, 28, 16, 0, 0))
+#airfac.add_flight(newflight)

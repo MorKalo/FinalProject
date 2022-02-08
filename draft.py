@@ -305,3 +305,51 @@ def remove_administrator(self, administrator_id):  # remove by administrator id
         self.repo.print_to_log(logging.INFO,
                                f'--Sucsses--  administrator id {administrator_id} is removed')
 
+
+
+
+
+
+
+    def add_airline(self, user, airline):#use this func from create airline only. user and airline are object.
+        self.repo.print_to_log(logging.DEBUG, f'add new airline is about to happen')
+        if  self.repo.get_by_condition(AirlineCompany, lambda query: query.filter(
+                    AirlineCompany.name == airline.name).all()):
+            self.repo.print_to_log(logging.ERROR,
+                        f'--FAILED--  {airline.name} we already have Airline company with this name')
+            raise NameNeedToBeDifrentException
+     #       print('Failed.  we already have Airline company with this name.')
+      #      return
+        if not self.repo.get_by_condition(Country,
+                                          lambda query: query.filter(Country.id == airline.country_id).all()):
+            print(f' Failed.  the country {airline.country_id} does not exist.')
+            return
+        airline.user_id=user.id
+        self.repo.add(airline)
+        return
+
+
+
+
+    def add_customer(self, user, customer):
+        self.repo.print_to_log(logging.DEBUG, f'adding customer is about to happen')
+        # trying to find this customer in Customer, and to check if there isnt another customer with does deatils:
+        # Phone number
+        if self.repo.get_by_condition(Customer,
+                                      lambda query: query.filter(
+                                          Customer.phone_number == customer.phone_number).all()):
+            print('Failed, a customer with this phone number is already exists.')
+            self.repo.print_to_log(logging.ERROR,
+                                   f'--FAILED--  {customer.id} a customer with the same Phone number {customer.phone_number}'
+                                   f'is alredy exists.')
+            return
+        # Credit-Card number
+        if self.repo.get_by_condition(Customer, lambda query: query.filter(
+                                          Customer.credit_card_no == customer.credit_card_no).all()):
+            print('Failed, a customer with this credit card number is already exists.')
+            self.repo.print_to_log(logging.ERROR,
+                                   f'--FAILED--  {customer.id} a customer with the Credit card  number {customer.credit_card_no}'
+                                   f'is alredy exists.')
+            return
+        customer.user_id = user.id
+        self.repo.add(customer)
