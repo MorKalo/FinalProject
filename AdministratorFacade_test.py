@@ -112,10 +112,6 @@ def test_remove_admin(dao_connection_test, admin_id, expected):
     actual=dao_connection_test.remove_airline(admin_id)
     assert actual==expected
 
-#def test_remove_airline(dao_connection_test):
-#    airline_id=2
-#    actual=dao_connection_test.remove_airline(airline_id)
-#    assert actual==False
 
 
 

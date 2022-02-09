@@ -6,8 +6,7 @@ from Flight import Flight
 from Ticket import Ticket
 import datetime
 import logging
-import datetime as dt
-from configparser import  ConfigParser
+
 
 
 logging.basicConfig(level='DEBUG')
@@ -54,8 +53,6 @@ class DbRepo:
         self.local_session.commit()
 
     def update_by_column_value(self, table_class, column_name, value, data):
-        #return self.local_session.query(table_class).filter(column_name == value)\
-        #    .update(data)
         self.local_session.query(table_class).filter(getattr(table_class, column_name)== value).update(data)
         self.local_session.commit()
 
@@ -95,10 +92,24 @@ class DbRepo:
         return self.local_session.query(Flight).filter(Flight.airline_Company_Id == airline_id).all()
 
     def get_by_condition(self, table_class, cond):
-        #return self.local_session.query(table_class).filter(cond).all()
         query_result = self.local_session.query(table_class)
         result = cond(query_result)
         return result
+
+    def create_all_sp(self, file):
+        try:
+            try:
+                with open(file, 'r') as sp_file:
+                    queries = sp_file.read().split('|||')
+                for query in queries:
+                    self.local_session.execute(query)
+                self.local_session.commit()
+                self.logger.logger.debug(f'all sp from {file} were created.')
+            except FileNotFoundError:
+                self.logger.logger.critical(f'Tried to create all sp from the the file "{file}" but file was not found')
+        except FileNotFoundError as e:
+            self.logger.logger.critical(e)
+
 
     def drop_all_table(self):
         self.local_session.execute(f'DROP TABLE {"countries"} cascade')

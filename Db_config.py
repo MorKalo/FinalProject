@@ -1,13 +1,8 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
-from Logger import Logger
 import logging
 
-config = ConfigParser()
-config.read("config.conf")
-connection_string = config["db"]["conn_string"]
 
-logger = Logger.get_instance()
 
 
 

@@ -10,7 +10,7 @@ class AirlineCompany(Base):
 
     id = Column(BigInteger(), primary_key=True, autoincrement=True)
     name= Column(String(), unique=True)
-    country_id=Column(Integer, ForeignKey ('countries.id', ondelete='CASCADE'))
+    country_id=Column(BigInteger, ForeignKey ('countries.id', ondelete='CASCADE'))
     user_id=Column(BigInteger(), ForeignKey ('users.id', ondelete='CASCADE'),  unique=True)
 
     countries = relationship('Country', backref=backref("airline_country", uselist=True, passive_deletes=True))

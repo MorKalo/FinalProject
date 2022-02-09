@@ -34,9 +34,9 @@ def dao_init():
     print('cleanup, after')
     time.sleep(3)
 
-@pytest.mark.parametrize('username, password, expected', [('turkish', '97', AirLineFacade())
-                                                        #  ,('pninosh', '786', CustomerFacade),
-                                                         # ('Moti5k', '232', AdministratorFacade),
+@pytest.mark.parametrize('username, password, expected', [('turkish', '97', AirLineFacade)
+                                                         ,('pninosh', '786', CustomerFacade),
+                                                          ('Moti5k', '232', AdministratorFacade),
                                                           ])
 def test_login(dao_connection_test, username, password, expected):
     actual=dao_connection_test.login(username, password)

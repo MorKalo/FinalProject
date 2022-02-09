@@ -41,9 +41,8 @@ class AdministratorFacade(BaseFacade):
                         AirlineCompany.name == airline.name).all()):
                     self.repo.print_to_log(logging.ERROR,
                                            f'--FAILED--  {airline.name} we already have Airline company with this name')
+                    print('Failed.  we already have Airline company with this name.')
                     raise NameNeedToBeDifrentException
-                #       print('Failed.  we already have Airline company with this name.')
-                #      return
                 if not self.repo.get_by_condition(Country,
                                                   lambda query: query.filter(Country.id == airline.country_id).all()):
                     print(f' Failed.  the country {airline.country_id} does not exist.')
@@ -64,7 +63,6 @@ class AdministratorFacade(BaseFacade):
             raise UsernotauthorizedException
         else:
             if super().create_new_user(user):
-                #self.add_customer(user, customer)
                 self.repo.print_to_log(logging.DEBUG, f'adding customer is about to happen')
                 # trying to find this customer in Customer, and to check if there isnt another customer with does deatils:
                 # Phone number
@@ -91,7 +89,7 @@ class AdministratorFacade(BaseFacade):
                                        f'--Sucsses--  User created: {user}, Administrator created: {customer}')
                 return True
             else:
-                #print(f'--Failed-- we cant create this user and Administrator')
+                print(f'--Failed-- we cant create this user and Administrator')
                 self.repo.print_to_log(logging.ERROR,
                                        f'--FAILED--   we cant create this user "{user}" and Administrator{customer} .')
                 raise CreateUserAndObjectFailedException
@@ -102,7 +100,6 @@ class AdministratorFacade(BaseFacade):
             raise UsernotauthorizedException
         else:
             if super().create_new_user(user):
-                #self.add_administrator(user, administrator)
                 self.repo.print_to_log(logging.DEBUG, f'add new admin is about to happen')
                 administrator.user_id = user.id
                 self.repo.add(administrator)

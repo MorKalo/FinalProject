@@ -1,0 +1,111 @@
+2022-02-08 17:50:52.014733 ERROR <class 'UsernotauthorizedException.UsernotauthorizedException'>
+2022-02-08 17:55:30.606166 ERROR --FAILED--  this user "<LoginToken.LoginToken object at 0x000001F5795901C0>"cant create airline.
+2022-02-08 17:57:11.563546 ERROR --FAILED--  this user "('peleg', 3)"cant create airline.
+2022-02-08 18:13:40.101863 ERROR --FAILED--  this user "('peleg', 3)"cant create airline.
+2022-02-08 21:37:56.438821 ERROR --FAILED--  this user "('peleg', 3)"cant create airline.
+2022-02-08 21:38:14.235010 ERROR --FAILED--  this user "('peleg', 3)"cant create airline.
+2022-02-08 21:38:19.221929 ERROR --FAILED--  this user "('peleg', 3)"cant create airline.
+2022-02-08 21:41:24.032911 INFO --Sucsses-- the user "arkia"  was created successfully, his details:   user id:7 email:arkia@gmail.com, user role:1  
+2022-02-08 21:41:24.033904 DEBUG add new airline is about to happen
+2022-02-08 21:41:24.037905 INFO --Sucsses--  User created: 
+<id=7 username=arkia password=arki email=arkia@gmail.com         user_role=1 >, Airline created: 
+<id=3 name=turkish country_id=1 user_id=7 >
+2022-02-08 21:45:40.972692 INFO --Sucsses-- the user "arkia"  was created successfully, his details:   user id:7 email:arkia@gmail.com, user role:1  
+2022-02-08 21:45:40.972692 DEBUG add new airline is about to happen
+2022-02-08 21:45:40.973696 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-08 21:47:29.533773 INFO --Sucsses-- the user "arkia"  was created successfully, his details:   user id:7 email:arkia@gmail.com, user role:1  
+2022-02-08 21:47:29.533773 DEBUG add new airline is about to happen
+2022-02-08 21:47:29.544766 INFO --Sucsses--  User created: 
+<id=7 username=arkia password=arki email=arkia@gmail.com         user_role=1 >, Airline created: 
+<id=3 name=al country_id=1 user_id=7 >
+2022-02-08 21:49:19.663673 INFO --Sucsses-- the user "arkia"  was created successfully, his details:   user id:7 email:arkia@gmail.com, user role:1  
+2022-02-08 21:49:19.663673 DEBUG add new airline is about to happen
+2022-02-08 21:49:19.668657 INFO --Sucsses--  User created: 
+<id=7 username=arkia password=arki email=arkia@gmail.com         user_role=1 >, Airline created: 
+<id=3 name=al country_id=1 user_id=7 >
+2022-02-08 21:49:34.433842 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-08 21:52:27.863244 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-08 21:56:28.387807 INFO --Sucsses-- the user "arkia"  was created successfully, his details:   user id:7 email:arkia@gmail.com, user role:1  
+2022-02-08 21:56:28.387807 DEBUG adding customer is about to happen
+2022-02-08 21:56:28.394808 INFO --Sucsses--  User created: 
+<id=7 username=arkia password=arki email=arkia@gmail.com         user_role=1 >, Administrator created: 
+<id=3 first_name=alijd last_name=ddd address=None         phone_number=0502111254 credit_card_no=12345678 user_id=7>
+2022-02-08 22:06:42.701051 INFO --Sucsses-- the user "arkia"  was created successfully, his details:   user id:7 email:arkia@gmail.com, user role:1  
+2022-02-08 22:06:42.701051 DEBUG adding customer is about to happen
+2022-02-08 22:06:42.707053 INFO --Sucsses--  User created: 
+<id=7 username=arkia password=arki email=arkia@gmail.com         user_role=1 >, Administrator created: 
+<id=3 first_name=alijd last_name=ddd address=None         phone_number=0502111254 credit_card_no=12345678 user_id=7>
+2022-02-08 22:07:19.033150 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-08 22:16:07.199121 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-08 22:16:13.593021 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-08 22:16:30.583709 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-08 22:28:21.508255 INFO --Sucsses-- the user "arkia"  was created successfully, his details:   user id:7 email:arkia@gmail.com, user role:1  
+2022-02-08 22:28:21.508255 DEBUG adding customer is about to happen
+2022-02-08 22:28:21.510228 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-08 22:32:34.988986 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-08 22:32:41.372088 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-08 22:32:44.548311 ERROR --FAILED--  None a customer with the Credit card  number 45802601is alredy exists.
+2022-02-08 22:33:01.704444 INFO --Sucsses-- the user "arkia"  was created successfully, his details:   user id:7 email:arkia@gmail.com, user role:1  
+2022-02-08 22:33:01.704444 DEBUG adding customer is about to happen
+2022-02-08 22:33:01.706450 ERROR --FAILED--  None a customer with the Credit card  number 123456is alredy exists.
+2022-02-08 22:38:59.149388 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-08 22:39:05.512327 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-08 22:39:08.700976 ERROR --FAILED--  None a customer with the Credit card  number 45802601is alredy exists.
+2022-02-08 22:53:15.792856 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-08 22:53:22.251623 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-08 22:53:25.485489 ERROR --FAILED--  None a customer with the Credit card  number 45802601is alredy exists.
+2022-02-08 22:53:32.004764 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 00:03:03.907122 DEBUG remove airline is about to happen
+2022-02-09 00:03:03.911125 INFO --Sucsses--  airline company id 2 is removed
+2022-02-09 00:03:22.496524 DEBUG remove airline is about to happen
+2022-02-09 00:03:22.498523 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 00:10:17.635387 DEBUG remove customer is about to happen
+2022-02-09 00:10:17.640382 ERROR --FAILED--    we cant find  this customer id 4
+2022-02-09 00:10:23.173299 DEBUG remove customer is about to happen
+2022-02-09 00:10:23.179263 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 00:13:56.110921 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-09 00:14:02.469491 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-09 00:14:05.645585 ERROR --FAILED--  None a customer with the Credit card  number 45802601is alredy exists.
+2022-02-09 00:14:12.038122 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 00:14:18.468922 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 00:15:17.630060 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-09 00:15:24.049669 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-09 00:15:27.262901 ERROR --FAILED--  None a customer with the Credit card  number 45802601is alredy exists.
+2022-02-09 00:15:33.676481 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 00:15:40.004565 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 00:16:07.953864 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-09 00:16:14.365388 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-09 00:16:17.569875 ERROR --FAILED--  None a customer with the Credit card  number 45802601is alredy exists.
+2022-02-09 00:16:23.996767 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 00:16:30.344569 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 00:16:36.707288 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 01:29:24.077971 DEBUG remove customer is about to happen
+2022-02-09 01:29:24.080977 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 01:35:34.384643 DEBUG remove customer is about to happen
+2022-02-09 01:35:34.389684 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 01:37:10.232084 DEBUG remove customer is about to happen
+2022-02-09 01:37:10.235528 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 01:48:04.998249 DEBUG remove customer is about to happen
+2022-02-09 01:48:05.004250 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 11:27:14.758698 DEBUG remove customer is about to happen
+2022-02-09 11:27:14.763699 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 11:36:02.373939 DEBUG remove customer is about to happen
+2022-02-09 11:36:02.379948 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 11:37:12.417670 DEBUG remove customer is about to happen
+2022-02-09 11:37:12.421091 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 11:57:07.354753 DEBUG remove customer is about to happen
+2022-02-09 11:57:07.354753 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 11:58:40.682256 DEBUG remove customer is about to happen
+2022-02-09 11:58:40.687258 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 13:17:48.464654 DEBUG remove customer is about to happen
+2022-02-09 13:17:48.469652 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 14:03:16.153966 DEBUG remove customer is about to happen
+2022-02-09 14:03:16.158965 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 14:24:36.998775 DEBUG remove customer is about to happen
+2022-02-09 14:24:37.001767 INFO --Sucsses--  customer id 2 is removed
+2022-02-09 15:01:46.418805 ERROR --FAILED--  Delta we already have Airline company with this name
+2022-02-09 15:01:52.820748 ERROR --FAILED--  None a customer with the same Phone number 0502111201is alredy exists.
+2022-02-09 15:01:55.994903 ERROR --FAILED--  None a customer with the Credit card  number 45802601is alredy exists.
+2022-02-09 15:02:02.401895 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 15:02:08.800729 ERROR --FAILED--    we cant find  this airline company id 4
+2022-02-09 15:02:15.207704 ERROR --FAILED--    we cant find  this airline company id 4

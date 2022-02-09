@@ -80,14 +80,3 @@ def test_add_ticket(dao_connection_test):
     actual=dao_connection_test.add_ticket(newticket)
     assert actual==True
 
-#ticket_id=1
-    #dao_connection_test.remove_ticket(ticket_id)
-    #ticketafter=dao_connection_test.get_my_tickets()
-    #assert Ticket.id==1 not in 'tickets'
-
-#@pytest.mark.parametrize('ticket, expected', [
-#                                              (Ticket(flight_id=1, customer_id=1), True),
-#                                             ])
-#def test_add_ticket(dao_connection_test, ticket, expected):
-#    actual = dao_connection_test.add_ticket(ticket)
-#    assert actual == expected

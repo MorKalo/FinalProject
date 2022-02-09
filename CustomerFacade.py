@@ -1,16 +1,13 @@
-#need to insert a check of token
 import logging
 from BaseFacade import BaseFacade
 from Db_config import local_session, create_all_entities
 from DbRepo import DbRepo
-from Administrator import Administrator
 from Flight import Flight
 from Customer import Customer
 from Ticket import Ticket
 from FlightNotFoundException import FlightNotFoundException
 from NoMoreTicketsForFlightsException import NoMoreTicketsForFlightsException
 from TicketNotFoundException import TicketNotFoundException
-from LoginToken import LoginToken
 from UsernotauthorizedException import UsernotauthorizedException
 
 
