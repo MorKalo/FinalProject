@@ -14,8 +14,9 @@ from UsernotauthorizedException import UsernotauthorizedException
 class CustomerFacade(BaseFacade):
 
     def __init__(self, logintoken):
-        self.repo=DbRepo(local_session)
-        self.logintoken = logintoken
+        super().__init__(logintoken)
+        #self.repo=DbRepo(local_session)
+        #self.logintoken = logintoken
 
 
     def update_customer(self,customer_id,update_data):#input from user only the data that we want to update.

@@ -1,4 +1,3 @@
-#there is a Q
 import logging
 from BaseFacade import BaseFacade
 from Db_config import local_session, create_all_entities
@@ -21,25 +20,23 @@ class AnonymusFacade(BaseFacade):
 
 
     def __init__(self):
-        self.repo=DbRepo(local_session)
+        super().__init__()
+
 
     def login(self, username, password):
         user = self.repo.get_by_condition(User, lambda query: query.filter(User.username == username).all())
         if not user:
             print('Faild, we didnt find that user.')
-            self.repo.print_to_log(logging.ERROR,
-                                   f'--FAILED--  we didnt find that user "{username}"')
+            self.logger.logger.ERROR(f'--FAILED--  {self.logintoken.__dict__} we didnt find that user "{username}"')
             return
         else:
             passw= self.repo.get_by_condition(User, lambda query: query.filter(User.password == password).all())
             if not passw:
                 print('Faild, wrong password.')
-                self.repo.print_to_log(logging.ERROR,
-                                       f'--FAILED--   wrong password for user "{username}"')
+                self.logger.logger.ERROR(f'--FAILED--   wrong password for user "{username}"')
                 return
             else:
-                self.repo.print_to_log(logging.INFO,
-                                   f'--Sucsses-- the password is match for user "{username}"')
+                self.logger.logger.info(f'--Sucsses--  the password is match for user "{username}"')
                 if user[0].user_role == 1:
                     airline_=self.repo.get_by_condition(AirlineCompany, lambda query: query.filter(AirlineCompany.user_id == user[0].id).all())
                     login_token = LoginToken(id=airline_[0].id, name=airline_[0].name, role=user[0].user_role)
@@ -53,8 +50,7 @@ class AnonymusFacade(BaseFacade):
                                            f'--Sucsses-- the user "{username}" transferred to Customer Facade  ')
                     return (CustomerFacade(login_token))
                 elif user[0].user_role == 3:
-                    self.repo.print_to_log(logging.INFO,
-                                           f'--Sucsses-- the user "{username}" transferred to Admin Facade  ')
+                    self.logger.logger.info(f'--Sucsses-- the user "{username}" transferred to Admin Facade  ')
                     admin= self.repo.get_by_condition(Administrator, lambda query: query.filter(Administrator.user_id == user[0].id).all())
                     login_token = LoginToken(id=admin[0].id, name=admin[0].first_name, role=user[0].user_role)
                     return (AdministratorFacade(login_token))

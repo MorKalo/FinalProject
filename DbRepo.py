@@ -6,25 +6,29 @@ from Flight import Flight
 from Ticket import Ticket
 import datetime
 import logging
+from Logger import Logger
+from LoginToken import LoginToken
 
 
 
-logging.basicConfig(level='DEBUG')
-logger = logging.getLogger("--DbRepo--")
+#logging.basicConfig(level='DEBUG')
+#logger = logging.getLogger("--DbRepo--")
 
-logging.info('info message')
+#logging.info('info message')
 
-file_handler = logging.FileHandler("logfile.log")
-file_handler.setLevel(logging.DEBUG)
-logger.addHandler(file_handler)
+#file_handler = logging.FileHandler("logfile.log")
+#file_handler.setLevel(logging.DEBUG)
+#logger.addHandler(file_handler)
 
 class DbRepo:
 
     def __init__(self, local_session):
-        self.local_session = local_session
+            self.local_session = local_session
+            self.logger = Logger.get_instance()
+
 
     def print_to_log(self, level, msg):
-        logger.log(level, f'{datetime.datetime.now()} {logging.getLevelName(level)} {msg}')
+        self.logger.logger(level, f'{datetime.datetime.now()} {logging.getLevelName(level)} {msg}')
 
     def get_by_id(self, table_class, id):
         return self.local_session.query(table_class).get(id)

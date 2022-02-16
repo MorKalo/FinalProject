@@ -1,4 +1,3 @@
-#check the uptade func.
 import logging
 from Db_config import local_session, create_all_entities
 from DbRepo import DbRepo
@@ -7,20 +6,21 @@ from Flight import Flight
 from Country import Country
 from BaseFacade import BaseFacade
 from UsernotauthorizedException import UsernotauthorizedException
+from Logger import *
 
 class AirLineFacade(BaseFacade):
 
     def __init__(self, logintoken):
-        self.repo=DbRepo(local_session)
-        self.logintoken = logintoken
+        super().__init__(logintoken)
+        #self.repo=DbRepo(local_session)
+        #self.logintoken = logintoken
 
 
     def get_my_flights(self): #by id
-        self.repo.print_to_log(logging.DEBUG, f'get flight by airline, for airline company id  {self.logintoken.id}'
+        self.logger.logger.debug( f'get flight by airline, for airline company id  {self.logintoken}'
                                               f' is about to happen')
         flights= self.repo.get_by_id(Flight,(self.logintoken.id))
-        self.repo.print_to_log(logging.INFO,
-                       f'--SUCCESS--  get flights by airline company {self.logintoken.name}  id '
+        self.logger.logger.info( f'--SUCCESS--  get flights by airline company {self.logintoken.name}  id '
                        f' {self.logintoken.id} is finish Successfully')
         return flights
 

@@ -25,3 +25,8 @@ init=Init_db()
 init.reset_all_db()
 create_all_entities()
 init.insert_test_db()
+
+
+adminf=AdministratorFacade(LoginToken(id=3, name='Moti', role=3))
+airf=AirLineFacade(LoginToken(id=1, name='turkish', role=1))
+print(airf.get_my_flights())

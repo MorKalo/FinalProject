@@ -11,13 +11,14 @@ from FlightNotFoundException import FlightNotFoundException
 from NoMoreTicketsForFlightsException import NoMoreTicketsForFlightsException
 from NameNeedToBeDifrentException import NameNeedToBeDifrentException
 from DataExistException import DataExistException
+from LoginToken import LoginToken
 
 repo=DbRepo(local_session)
 
 @pytest.fixture(scope='session', autouse=True)
 def dao_connection_test():
-    anon_facade=AnonymusFacade()
-    return anon_facade.login('Moti5k', '232')
+    anonfac=AnonymusFacade()
+    return anonfac.login('Moti5k', '232')
 
 
 @pytest.fixture(scope='function', autouse=True)

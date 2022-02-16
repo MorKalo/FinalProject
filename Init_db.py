@@ -35,6 +35,7 @@ class Init_db():
         self.repo.add(User_Roles(role_name='airline_company'))
         self.repo.add(User_Roles(role_name='customer'))
         self.repo.add(User_Roles(role_name='administrator'))
+        self.repo.add(User_Roles(role_name='Anonymus'))
         # add user's
         self.repo.add(User(username='Delta_airline', password='123', email='delta@gmail.com', user_role=1))
         self.repo.add(User(username='Nanos', password='324', email='nanos2@gmail.com', user_role=2))

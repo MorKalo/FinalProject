@@ -8,16 +8,19 @@ from AirlineCompany import AirlineCompany
 from Country import Country
 from User import User
 from UserAlreadyExistException import UserAlreadyExistException
-
+from Logger import Logger
+from LoginToken import LoginToken
 repo = DbRepo(local_session)
 
 
 class BaseFacade(ABC):
 
     @abstractmethod
-    def __init__(self, repo):
-        self.repo=repo
-
+    def __init__(self, logintoken = LoginToken(id=None, name='Anonymous', role=4)):
+        #self.repo=repo
+        self.logger = Logger.get_instance()
+        self.repo = DbRepo(local_session)
+        self.logintoken = logintoken
 
     def get_all_flights(self):
         print(self.repo.get_all(Flight))

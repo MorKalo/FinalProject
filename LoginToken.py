@@ -17,3 +17,9 @@ class LoginToken:
     def role(self):
         return self._role
 
+    def __repr__(self):
+        return f'LoginToken(id_={self.id}, name="{self.name}", role="{self.role}")'
+
+    def __str__(self):
+        return f'LoginToken[id_={self.id}, name="{self.name}", role="{self.role}"]'
+
